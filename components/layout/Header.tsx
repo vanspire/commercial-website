@@ -59,14 +59,12 @@ export default function Header() {
     >
       <div className="container-site flex items-center justify-between h-[75px] md:h-[85px]">
         {/* Logo / Wordmark */}
-        <Link href="/" aria-label="Vanspire home" className="flex items-center gap-2 group">
-          <span
-            className={`text-[1.4rem] font-semibold tracking-[-0.04em] transition-colors duration-300 ${
-              isSolid ? 'text-brand-black' : 'text-white'
-            }`}
-          >
-            Vanspire
-          </span>
+        <Link href="/" aria-label="Vanspire home" className="flex items-center">
+          <img
+            src={isSolid ? '/blacklogo.svg' : '/whitelogo.svg'}
+            alt="Vanspire"
+            className="h-8 w-auto transition-all duration-300"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -146,9 +144,7 @@ export default function Header() {
         >
           {/* Panel header */}
           <div className="flex items-center justify-between px-6 h-[75px] border-b border-brand-border">
-            <span className="text-[1.4rem] font-semibold tracking-tightest text-brand-black">
-              Vanspire
-            </span>
+            <img src="/blacklogo.svg" alt="Vanspire" className="h-8 w-auto" />
             <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
               <X size={20} className="text-brand-black" />
             </button>

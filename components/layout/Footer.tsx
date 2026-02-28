@@ -46,9 +46,7 @@ export default function Footer() {
           {/* Left: Brand block */}
           <div>
             <Link href="/" className="inline-block mb-8">
-              <span className="text-[1.6rem] font-semibold tracking-tightest text-white">
-                Vanspire
-              </span>
+              <img src="/whitelogo.svg" alt="Vanspire" className="h-8 w-auto" />
             </Link>
             <p className="text-white/50 font-light text-[15px] leading-relaxed max-w-sm mb-8">
               A future-focused brand group building technology-driven ventures.
