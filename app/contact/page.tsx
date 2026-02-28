@@ -1,12 +1,11 @@
 'use client'
 
-import type { Metadata } from 'next'
 import MotionWrapper from '@/components/ui/MotionWrapper'
 import SectionLabel from '@/components/ui/SectionLabel'
 import { useState } from 'react'
 
-// Note: For metadata in client components, export from a separate file or use generateMetadata
-// This is a client component because of the form state
+// Metadata is exported from app/contact/layout.tsx (server component)
+// This is a client component due to form state
 
 type FormState = {
   name: string
@@ -35,10 +34,31 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!validate()) return
+
     setStatus('submitting')
-    // Simulate submission (replace with real API call)
-    await new Promise((res) => setTimeout(res, 1200))
-    setStatus('success')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        // Surface server-side error to user
+        setErrors({ message: data.error || 'Something went wrong. Please try again.' })
+        setStatus('error')
+        return
+      }
+
+      setStatus('success')
+      setForm({ name: '', email: '', company: '', message: '' })
+    } catch {
+      setErrors({ message: 'Network error. Please check your connection and try again.' })
+      setStatus('error')
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
