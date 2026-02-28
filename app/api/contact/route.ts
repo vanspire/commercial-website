@@ -2,7 +2,7 @@ import "dotenv/config";
 
 import { NextRequest, NextResponse } from "next/server";
 
-// Recipients — Web3Forms forwards to the email registered with the access key.
+// Recipients - Web3Forms forwards to the email registered with the access key.
 // To CC additional addresses, list them here.
 const CC_RECIPIENTS = ["hello@vanspire.in", "adithyan.n.dileep@gmail.com"];
 
@@ -31,11 +31,11 @@ export async function POST(req: NextRequest) {
       timeZone: "Asia/Kolkata",
     });
 
-    // Forward via Web3Forms (free — no SMTP required)
+    // Forward via Web3Forms (free - no SMTP required)
     // Docs: https://web3forms.com
     const formPayload = {
       access_key: process.env.WEB3FORMS_KEY,
-      subject: `New Enquiry from ${name} — ${company}`,
+      subject: `New Enquiry from ${name} - ${company}`,
       from_name: "Vanspire Contact Form",
       replyto: "vanspire.innovations@gmail.com",
       cc: CC_RECIPIENTS.join(","),

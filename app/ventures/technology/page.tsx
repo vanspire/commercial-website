@@ -1,26 +1,27 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import MotionWrapper from '@/components/ui/MotionWrapper'
 import SectionLabel from '@/components/ui/SectionLabel'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Vanspire Technology | Enterprise Software & Cloud',
+  title: 'Vanspire Technology | Enterprise Software, Cloud & Digital Systems',
   description:
-    'Vanspire Technology builds enterprise web platforms, custom software, cloud infrastructure, IoT systems, and delivers digital transformation consulting. Production-grade. Scalable. Reliable.',
+    'Vanspire Technology builds enterprise web platforms, custom software, cloud infrastructure, IoT systems, and delivers digital transformation consulting. Production-grade. Scalable. Built to last.',
   keywords: [
-    'software development company',
-    'enterprise web development',
-    'scalable cloud systems',
+    'enterprise web development India',
+    'custom software development company',
+    'cloud architecture services',
     'IoT development solutions',
     'digital transformation consulting',
-    'custom software engineering',
-    'cloud infrastructure architecture',
+    'scalable web platforms',
+    'enterprise application development',
   ],
   openGraph: {
-    title: 'Vanspire Technology | Enterprise Software, Cloud & IoT',
+    title: 'Vanspire Technology | Enterprise Software, Cloud & Digital Systems',
     description:
       'Enterprise-grade web platforms, custom software engineering, cloud architecture, and IoT solutions. Built for scale, built to last.',
     url: '/ventures/technology',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Vanspire Technology' }],
   },
   alternates: { canonical: '/ventures/technology' },
 }
@@ -28,95 +29,87 @@ export const metadata: Metadata = {
 const services = [
   {
     id: '01',
-    title: 'Web & Platform Development',
-    description:
-      'We architect and build enterprise-grade web platforms that are designed for scale from day one. Our approach goes beyond templating - we engineer full-stack systems with performant front-ends, robust APIs, and maintainable codebases. Whether you need a customer portal, SaaS platform, or complex multi-tenant application, we deliver production-ready solutions that your teams can operate and your business can grow on. Every platform is built with accessibility, security, and long-term maintainability as non-negotiables.',
+    title: 'Software & Web Platforms',
+    short: 'Scalable digital products built for performance and longevity.',
+    href: '/ventures/technology/services/software-web-platforms',
+    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: '02',
-    title: 'Custom Software Engineering',
-    description:
-      'Off-the-shelf software rarely fits complex operational requirements. Our custom software engineering practice designs and builds purpose-built systems that align precisely with your business logic, data flows, and integration landscape. We engage at the architecture level - not just the feature level - ensuring that the software we deliver becomes a true asset, not a liability. From internal tooling to mission-critical enterprise applications, we bring structured engineering discipline to every engagement.',
+    title: 'Application Development',
+    short: 'Custom applications designed around real business workflows.',
+    href: '/ventures/technology/services/application-development',
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: '03',
-    title: 'Cloud & Infrastructure Architecture',
-    description:
-      'Scalable cloud infrastructure is not a luxury - it is the foundation of resilient enterprise software. Our cloud and infrastructure practice designs, provisions, and optimises architectures across AWS, GCP, and Azure. We focus on reliability, cost efficiency, security compliance, and developer experience. From greenfield cloud migrations to hybrid infrastructure design and DevOps pipeline optimisation, we bring enterprise-grade cloud expertise to organisations across industries.',
+    title: 'Cloud & System Architecture',
+    short: 'Secure, scalable infrastructure built for growth.',
+    href: '/ventures/technology/services/cloud-system-architecture',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: '04',
-    title: 'IoT & Smart Systems',
-    description:
-      'The convergence of physical and digital systems creates profound opportunity for organisations that are prepared to capture it. Our IoT and smart systems practice designs connected device architectures, real-time data pipelines, edge computing solutions, and smart facility management systems. We bridge embedded hardware, communication protocols, cloud backends, and operational dashboards into coherent, maintainable systems. Whether you are building a smart factory, connected fleet, or building management solution, we bring the full stack to your IoT ambition.',
+    title: 'IoT & Smart Solutions',
+    short: 'Connected systems bridging physical and digital environments.',
+    href: '/ventures/technology/services/iot-smart-solutions',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: '05',
-    title: 'Digital Transformation Consulting',
-    description:
-      'Technology adoption without strategy is expensive. Our digital transformation consulting practice works with leadership teams to design transformation roadmaps that are grounded in business outcomes, not technology trends. We assess your current technology landscape, identify leverage points, and design phased programmes that de-risk transformation while accelerating value delivery. We stay engaged through implementation - not just advisory - ensuring the strategy translates into working systems.',
+    title: 'Digital Transformation',
+    short: 'Modernizing operations through technology-led thinking.',
+    href: '/ventures/technology/services/digital-transformation',
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80',
   },
 ]
 
 const process = [
-  {
-    step: '01',
-    name: 'Discovery',
-    description:
-      'We begin every engagement with deep discovery - understanding your business context, technical landscape, constraints, and success criteria. This phase includes stakeholder interviews, system audits, and requirement workshops.',
-  },
-  {
-    step: '02',
-    name: 'Architecture',
-    description:
-      'Before any code is written, we design the system architecture. We produce technical design documents, data flow diagrams, infrastructure blueprints, and API contracts. Architecture reviews include security and scalability assessments.',
-  },
-  {
-    step: '03',
-    name: 'Development',
-    description:
-      'Engineering follows a structured sprint cadence with regular demos, automated testing, code reviews, and documented progress. We maintain a shared project management workspace and provide weekly written updates.',
-  },
-  {
-    step: '04',
-    name: 'Deployment',
-    description:
-      'Production deployments are managed with zero-downtime strategies, staged rollouts, and automated rollback capability. We configure monitoring, alerting, and logging before handover. Nothing ships without a deployment checklist.',
-  },
-  {
-    step: '05',
-    name: 'Scaling',
-    description:
-      'Post-launch, we support scaling through performance optimisation, infrastructure right-sizing, feature iteration, and ongoing architecture evolution. We are a long-term partner - not a one-time vendor.',
-  },
+  { step: '01', name: 'Discovery', desc: 'Deep discovery of your business context, technical landscape, and success criteria through workshops and audits.' },
+  { step: '02', name: 'Architecture', desc: 'System architecture design, data flow mapping, infrastructure blueprints, and API contracts before code begins.' },
+  { step: '03', name: 'Development', desc: 'Structured sprint cadence with automated testing, code reviews, and documented progress. Weekly written updates.' },
+  { step: '04', name: 'Deployment', desc: 'Zero-downtime production deployments with staged rollouts, monitoring configuration, and automated rollback.' },
+  { step: '05', name: 'Scaling', desc: 'Ongoing performance optimisation, infrastructure evolution, and feature iteration as a long-term partner.' },
 ]
 
 export default function TechnologyPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-24 md:pt-48 md:pb-28 bg-brand-black text-white">
-        <div className="container-site">
+      <section className="pt-40 pb-24 md:pt-52 md:pb-32 bg-[#060608] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80"
+            alt=""
+            className="w-full h-full object-cover opacity-10"
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent" />
+        </div>
+        <div className="container-site relative z-10">
           <MotionWrapper>
-            <SectionLabel light>Vanspire Venture · Active</SectionLabel>
+            <div className="inline-flex items-center gap-3 mb-6">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-[11px] uppercase tracking-[0.2em] text-white/40">Vanspire Venture · Active</span>
+            </div>
           </MotionWrapper>
           <MotionWrapper delay={0.1}>
-            <h1 className="text-display-lg text-white max-w-3xl mt-4 mb-8">
+            <h1 className="text-[clamp(3rem,7vw,6.5rem)] font-light tracking-[-0.04em] text-white leading-[1.0] mt-2 mb-8">
               Technology
             </h1>
           </MotionWrapper>
           <MotionWrapper delay={0.2}>
-            <p className="text-body-lg text-white/50 max-w-2xl mb-10">
-              Enterprise software, cloud infrastructure, IoT systems, and digital
-              transformation. Built for organisations that think in decades, not quarters.
+            <p className="text-[17px] font-light text-white/50 max-w-2xl mb-10 leading-[1.85]">
+              Enterprise software, cloud infrastructure, IoT systems, and digital transformation.
+              Built for organisations that think in decades, not quarters.
             </p>
           </MotionWrapper>
           <MotionWrapper delay={0.3}>
             <Link
               href="/contact"
-              className="inline-flex items-center h-[52px] px-10 bg-white text-brand-black text-[14px] font-medium hover:bg-white/90 transition-all duration-300"
+              className="inline-flex items-center gap-3 h-[54px] px-10 bg-white text-[#060608] text-[14px] font-medium hover:bg-white/90 transition-all"
             >
-              Start a Conversation
+              Start a Conversation →
             </Link>
           </MotionWrapper>
         </div>
@@ -127,29 +120,34 @@ export default function TechnologyPage() {
         <div className="container-site">
           <MotionWrapper className="mb-16">
             <SectionLabel>Services</SectionLabel>
-            <h2 className="text-display-md text-brand-black max-w-xl mt-4">
+            <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light tracking-[-0.04em] text-brand-black mt-4 leading-[1.1]">
               What we build.
             </h2>
+            <p className="text-[15px] font-light text-brand-muted mt-4 max-w-xl">
+              Five focused service areas. Each with dedicated expertise, structured delivery, and long-term support.
+            </p>
           </MotionWrapper>
 
-          <div className="divide-y divide-brand-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((svc, i) => (
               <MotionWrapper key={svc.id} delay={i * 0.08}>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 py-12">
-                  <div className="lg:col-span-1">
-                    <span className="text-label text-brand-border">{svc.id}</span>
+                <Link href={svc.href} className="group block border border-brand-border hover:border-brand-black transition-all duration-300">
+                  <div className="overflow-hidden">
+                    <img
+                      src={svc.image}
+                      alt={svc.title}
+                      className="w-full h-[180px] object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
                   </div>
-                  <div className="lg:col-span-4">
-                    <h3 className="text-xl md:text-2xl font-light tracking-tight text-brand-black">
-                      {svc.title}
-                    </h3>
+                  <div className="p-8">
+                    <span className="text-label text-brand-border block mb-3">{svc.id}</span>
+                    <h3 className="text-[18px] font-light tracking-tight text-brand-black mb-3">{svc.title}</h3>
+                    <p className="text-[14px] font-light text-brand-muted leading-relaxed mb-6">{svc.short}</p>
+                    <span className="text-[12px] font-medium text-brand-black inline-flex items-center gap-1 group-hover:gap-3 transition-all duration-300">
+                      Learn more →
+                    </span>
                   </div>
-                  <div className="lg:col-span-7">
-                    <p className="text-[15px] font-light text-brand-muted leading-[1.85]">
-                      {svc.description}
-                    </p>
-                  </div>
-                </div>
+                </Link>
               </MotionWrapper>
             ))}
           </div>
@@ -161,22 +159,18 @@ export default function TechnologyPage() {
         <div className="container-site">
           <MotionWrapper className="mb-16">
             <SectionLabel>How We Work</SectionLabel>
-            <h2 className="text-display-md text-brand-black max-w-xl mt-4">
-              A structured process.<br />Every time.
+            <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-light tracking-[-0.04em] text-brand-black mt-4 leading-[1.1]">
+              A structured process.<br />Every engagement.
             </h2>
           </MotionWrapper>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-brand-border">
-            {process.map((step, i) => (
-              <MotionWrapper key={step.step} delay={i * 0.08}>
+            {process.map((p, i) => (
+              <MotionWrapper key={p.step} delay={i * 0.08}>
                 <div className="bg-brand-offwhite p-8 h-full">
-                  <span className="text-label text-brand-border block mb-6">{step.step}</span>
-                  <h3 className="text-[17px] font-medium text-brand-black mb-4 tracking-tight">
-                    {step.name}
-                  </h3>
-                  <p className="text-[13px] font-light text-brand-muted leading-relaxed">
-                    {step.description}
-                  </p>
+                  <span className="text-label text-brand-border block mb-6">{p.step}</span>
+                  <h3 className="text-[16px] font-medium text-brand-black mb-3 tracking-tight">{p.name}</h3>
+                  <p className="text-[13px] font-light text-brand-muted leading-relaxed">{p.desc}</p>
                 </div>
               </MotionWrapper>
             ))}
@@ -184,36 +178,47 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="section-pad bg-brand-black">
-        <div className="container-site">
-          <div className="max-w-3xl">
-            <MotionWrapper>
-              <SectionLabel light>Enterprise-Level Engagement</SectionLabel>
-              <h2 className="text-display-md text-white mt-4 mb-6">
-                Ready to build something that scales?
-              </h2>
-              <p className="text-body text-white/50 mb-10">
-                We work with organisations that take their technology seriously.
-                If you are looking for a capable, structured, and honest technology
-                partner - let&apos;s begin with a conversation.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center h-[52px] px-10 bg-white text-brand-black text-[14px] font-medium hover:bg-white/90 transition-all"
-                >
-                  Start a Conversation
-                </Link>
-                <Link
-                  href="/ventures"
-                  className="inline-flex items-center h-[52px] px-10 border border-white/20 text-white text-[14px] font-light hover:border-white/50 transition-all"
-                >
-                  All Ventures
-                </Link>
-              </div>
-            </MotionWrapper>
+      {/* Insights link */}
+      <section className="py-20 bg-white border-t border-brand-border">
+        <div className="container-site flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div>
+            <p className="text-label text-brand-muted mb-2">From Our Insights</p>
+            <h3 className="text-[20px] font-light tracking-tight text-brand-black">
+              Read how we think about enterprise technology
+            </h3>
           </div>
+          <Link
+            href="/insights"
+            className="inline-flex items-center gap-2 text-[13px] font-medium text-brand-black border-b border-brand-black/20 pb-1 hover:border-brand-black transition-all flex-shrink-0"
+          >
+            View All Insights →
+          </Link>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-pad bg-[#060608]">
+        <div className="container-site max-w-3xl">
+          <MotionWrapper>
+            <SectionLabel light>Enterprise Engagement</SectionLabel>
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light tracking-[-0.04em] text-white mt-4 mb-6 leading-[1.08]">
+              Ready to build something<br />
+              <em className="not-italic text-white/40">that scales?</em>
+            </h2>
+            <p className="text-[15px] font-light text-white/50 mb-10 max-w-xl leading-[1.85]">
+              We work with organisations that take their technology seriously. If you are
+              looking for a capable, structured, and honest technology partner - let&apos;s begin
+              with a conversation.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact" className="inline-flex items-center gap-2 h-[52px] px-10 bg-white text-[#060608] text-[14px] font-medium hover:bg-white/90 transition-all">
+                Start a Conversation →
+              </Link>
+              <Link href="/ventures" className="inline-flex items-center h-[52px] px-10 border border-white/20 text-white text-[14px] font-light hover:border-white/50 transition-all">
+                All Ventures
+              </Link>
+            </div>
+          </MotionWrapper>
         </div>
       </section>
     </>

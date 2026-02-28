@@ -1,14 +1,17 @@
 import type { Metadata } from 'next'
 import HomeHero from '@/components/sections/HomeHero'
-import BrandIntro from '@/components/sections/BrandIntro'
-import VenturesOverview from '@/components/sections/VenturesOverview'
-import WhyVanspire from '@/components/sections/WhyVanspire'
+import BrandStatement from '@/components/sections/BrandStatement'
+import CurrentFocus from '@/components/sections/CurrentFocus'
+import Capabilities from '@/components/sections/Capabilities'
+import Philosophy from '@/components/sections/Philosophy'
+import FutureReady from '@/components/sections/FutureReady'
+import ValuesSection from '@/components/sections/ValuesSection'
 import CTASection from '@/components/sections/CTASection'
 
 export const metadata: Metadata = {
-  title: 'Vanspire | Future-Focused Brand Group',
+  title: 'Vanspire | Building the Foundations for Tomorrow\'s Industries',
   description:
-    'Vanspire is a future-focused brand group building technology-driven ventures. Scalable digital systems, enterprise software, and cloud infrastructure - engineered for long-term growth.',
+    'Vanspire is a future-focused brand group creating scalable systems, solutions, and ventures - starting with technology and expanding with purpose. Enterprise software, web platforms, cloud architecture, and IoT solutions.',
   alternates: {
     canonical: '/',
   },
@@ -18,9 +21,12 @@ export default function HomePage() {
   return (
     <>
       <HomeHero />
-      <BrandIntro />
-      <VenturesOverview />
-      <WhyVanspire />
+      <BrandStatement />
+      <CurrentFocus />
+      <Capabilities />
+      <Philosophy />
+      <FutureReady />
+      <ValuesSection />
       <CTASection />
     </>
   )
