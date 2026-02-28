@@ -1,4 +1,3 @@
-export const runtime = "edge";
 import "dotenv/config";
 
 import { NextRequest, NextResponse } from "next/server";
