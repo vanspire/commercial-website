@@ -1,4 +1,6 @@
+export const runtime = "edge";
 import "dotenv/config";
+
 import { NextRequest, NextResponse } from "next/server";
 
 // Recipients — Web3Forms forwards to the email registered with the access key.
@@ -59,6 +61,9 @@ export async function POST(req: NextRequest) {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
+        "User-Agent": "Mozilla/5.0 (Vercel Serverless)",
+        Origin: "https://vanspire.in",
+        Referer: "https://vanspire.in/contact",
       },
       body: JSON.stringify(formPayload),
     });
