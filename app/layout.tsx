@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import LayoutWrapper from '@/components/layout/LayoutWrapper'
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
@@ -136,7 +137,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-sans bg-white text-brand-black">
         <Header />
-        <main className="flex-1">{children}</main>
+        <LayoutWrapper>
+          <main className="flex-1">{children}</main>
+        </LayoutWrapper>
         <Footer />
         <Analytics />
         <SpeedInsights />

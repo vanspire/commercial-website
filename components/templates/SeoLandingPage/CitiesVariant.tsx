@@ -21,12 +21,12 @@ export default function CitiesVariant({ data }: { data: SeoLandingPageProps['cit
           {data.list.map((city, index) => (
             <div 
               key={index} 
-              className="flex items-center gap-4 p-6 bg-brand-light border border-brand-border"
+              className="group flex flex-col md:flex-row md:items-center gap-4 p-6 md:px-8 bg-white border border-brand-border/60 hover:bg-brand-black hover:border-brand-black transition-colors duration-300 rounded-2xl shadow-sm hover:shadow-lg"
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-white border border-brand-border shrink-0">
-                <MapPin className="w-5 h-5 text-brand-black" />
+              <div className="w-12 h-12 flex items-center justify-center bg-brand-light rounded-full border border-brand-border/50 shrink-0 group-hover:bg-white/10 group-hover:border-white/20 transition-colors duration-300">
+                <MapPin className="w-5 h-5 text-brand-black group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-medium tracking-wide">
+              <h3 className="text-lg font-medium tracking-wide text-brand-black group-hover:text-white transition-colors duration-300">
                 {city}
               </h3>
             </div>

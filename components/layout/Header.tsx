@@ -22,15 +22,17 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null)
   const pathname = usePathname()
 
-  // Pages where header is always scrolled (solid bg)
-  const alwaysSolid = [
-    '/about',
-    '/ventures',
-    '/insights',
-    '/contact',
-    '/terms',
-    '/privacy',
-  ].some((p) => pathname.startsWith(p))
+  // Define routes that have a dark hero image spanning edge-to-edge.
+  // These routes get the transparent "Dark Mode" header on load.
+  // All other routes will default to a solid white "Light Mode" header for contrast.
+  const darkHeroRoutes = [
+    '/', // Homepage has a dark hero
+    // Add other specific dark hero landing pages here if needed
+  ]
+  
+  // Exact match or starts with logic depending on requirements. 
+  // Using exact match for root, and startsWith for others if needed.
+  const isDarkHeroRoute = darkHeroRoutes.includes(pathname)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -47,13 +49,25 @@ export default function Header() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
-  const isSolid = alwaysSolid || scrolled
+  // If it's NOT a dark hero route, it's ALWAYS solid. 
+  // If it IS a dark hero route, it's solid ONLY when scrolled.
+  const isSolid = !isDarkHeroRoute || scrolled
+
+  // Determine actual text/logo colors based on solid state
+  // Solid = Light Mode Header (Black text, White bg)
+  // Transparent = Dark Mode Header (White text, transparent bg)
+  const navTextColor = isSolid ? 'text-brand-black hover:text-brand-muted' : 'text-white/80 hover:text-white'
+  const logoSrc = isSolid ? '/blacklogo.svg' : '/whitelogo.svg'
+  const ctaClasses = isSolid 
+    ? 'bg-brand-black text-white border-brand-black hover:bg-white hover:text-brand-black'
+    : 'bg-white text-brand-black border-white hover:bg-transparent hover:text-white hover:border-white'
+  const mobileMenuIconColor = isSolid ? 'text-brand-black' : 'text-white'
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isSolid
-          ? 'bg-white border-b border-brand-border'
+          ? 'bg-white border-b border-brand-border shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -61,7 +75,7 @@ export default function Header() {
         {/* Logo / Wordmark */}
         <Link href="/" aria-label="Vanspire home" className="flex items-center">
           <img
-            src={isSolid ? '/blacklogo.svg' : '/whitelogo.svg'}
+            src={logoSrc}
             alt="Vanspire"
             className="h-8 w-auto transition-all duration-300"
           />
@@ -73,11 +87,7 @@ export default function Header() {
             <div key={index} className="relative group">
               <Link
                 href={item.href}
-                className={`flex items-center gap-1 text-[14px] font-light transition-colors duration-300 ${
-                  isSolid
-                    ? 'text-brand-black hover:text-brand-muted'
-                    : 'text-white/80 hover:text-white'
-                }`}
+                className={`flex items-center gap-1 text-[14px] font-light transition-colors duration-300 ${navTextColor}`}
               >
                 {item.name}
                 {item.children && (
@@ -109,7 +119,7 @@ export default function Header() {
         {/* Desktop CTA */}
         <Link
           href="/contact"
-          className={ `hidden lg:inline-flex items-center h-[42px] px-6 text-[13px] font-medium border transition-all duration-300 hover:scale-[0.98] ${isSolid ? 'bg-brand-black text-white border-brand-black hover:bg-white hover:text-brand-black' : 'bg-white text-brand-black border-brand-black hover:bg-brand-black hover:text-white'}`}
+          className={`hidden lg:inline-flex items-center h-[42px] px-6 text-[13px] font-medium border transition-all duration-300 hover:scale-[0.98] ${ctaClasses}`}
         >
           Get in Touch
         </Link>
@@ -122,7 +132,7 @@ export default function Header() {
         >
           <Menu
             size={22}
-            className={`transition-colors duration-300 ${isSolid ? 'text-brand-black' : 'text-white'}`}
+            className={`transition-colors duration-300 ${mobileMenuIconColor}`}
           />
         </button>
       </div>
