@@ -7,6 +7,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: `${siteUrl}/`, lastModified, changeFrequency: 'weekly', priority: 1.0 },
+    
+    // New SEO Landing Pages
+    { url: `${siteUrl}/best-website-development-company-in-kochi`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${siteUrl}/best-digital-marketing-company-in-kerala`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${siteUrl}/best-mobile-app-development-company-in-india`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${siteUrl}/iot-and-software-solutions`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+
     { url: `${siteUrl}/about`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${siteUrl}/ventures`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${siteUrl}/ventures/technology`, lastModified, changeFrequency: 'weekly', priority: 0.95 },
