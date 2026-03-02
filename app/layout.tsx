@@ -19,30 +19,33 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: 'Vanspire | Future-Focused Brand Group',
+    default: 'Vanspire | Best Software, Web & App Development Company in India',
     template: '%s | Vanspire',
   },
 
   description:
-    'Vanspire is a future-focused brand group building technology-driven ventures. Our first active vertical is Technology - engineering scalable digital systems, enterprise software, and cloud infrastructure for the companies of tomorrow.',
+    'Vanspire is the best software solutions, website development, mobile apps, and digital marketing company in India and Kerala. We specialize in IoT solutions, cloud infrastructure, and enterprise software.',
 
   keywords: [
+    'best software solutions',
+    'best website development company',
+    'best digital marketing company',
+    'best website solution',
+    'best mobile applications development in india',
+    'IoT solution',
+    'software website apps',
+    'cloud marketing',
+    'kerala',
+    'india',
     'Vanspire',
-    'future-focused technology company',
-    'scalable digital systems',
-    'enterprise software solutions',
-    'technology-driven growth',
-    'brand group',
-    'digital transformation',
-    'software innovation',
-    'enterprise web development',
+    'enterprise software',
     'scalable cloud systems',
   ],
 
   openGraph: {
-    title: 'Vanspire | Future-Focused Brand Group',
+    title: 'Vanspire Innovations | Best Software & Web Development Company',
     description:
-      'Vanspire builds technology-driven ventures. Scalable systems, enterprise software, and cloud infrastructure - engineered for long-term growth.',
+      'Vanspire offers the best software solutions, website development, mobile apps, IoT, and digital marketing in India and Kerala.',
     url: SITE_URL,
     siteName: 'Vanspire',
     images: [
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
         url: '/ogimage.webp',
         width: 1200,
         height: 630,
-        alt: 'Vanspire - Future-Focused Brand Group',
+        alt: 'Vanspire - Software and Web Development',
       },
     ],
     type: 'website',
@@ -59,9 +62,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Vanspire | Future-Focused Brand Group',
+    title: 'Vanspire Innovations | Best Software & Web Development Company',
     description:
-      'Vanspire builds technology-driven ventures. Scalable systems, enterprise software, and cloud infrastructure - engineered for long-term growth.',
+      'Vanspire offers the best software solutions, website development, mobile apps, IoT, and digital marketing in India and Kerala.',
     images: ['/ogimage.webp'],
   },
 
@@ -94,14 +97,15 @@ const jsonLd = {
     {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
-      name: 'Vanspire',
+      name: 'Vanspire Innovations',
       url: SITE_URL,
       description:
-        'Vanspire is a future-focused brand group building technology-driven ventures across enterprise software, cloud infrastructure, and digital transformation.',
+        'Vanspire Innovations is the best software solutions, website development, mobile apps, and digital marketing company in India and Kerala, specializing in IoT and cloud infrastructure.',
       foundingDate: '2024',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'IN',
+        addressRegion: 'Kerala',
       },
       contactPoint: {
         '@type': 'ContactPoint',
@@ -113,7 +117,7 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,
       url: SITE_URL,
-      name: 'Vanspire',
+      name: 'Vanspire Innovations',
       publisher: {
         '@id': `${SITE_URL}/#organization`,
       },

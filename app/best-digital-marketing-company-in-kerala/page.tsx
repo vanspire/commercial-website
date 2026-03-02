@@ -9,15 +9,15 @@ import ValuesSection from '@/components/sections/ValuesSection'
 import CTASection from '@/components/sections/CTASection'
 
 export const metadata: Metadata = {
-  title: 'Best Website Development, Digital Marketing & Mobile App Company in India | Vanspire',
+  title: 'Best Digital Marketing Company in Kerala | Vanspire Innovations',
   description:
-    'Vanspire is the top choice for software solutions, website development, mobile apps, and digital marketing in India and Kerala, delivering scalable cloud and IoT solutions.',
+    'Vanspire is recognized as the best digital marketing company in Kerala. We specialize in comprehensive cloud marketing, SEO, and technology-driven growth strategies.',
   alternates: {
-    canonical: '/',
+    canonical: '/best-digital-marketing-company-in-kerala',
   },
 }
 
-export default function HomePage() {
+export default function KeralaDigitalMarketingPage() {
   return (
     <>
       <HomeHero />

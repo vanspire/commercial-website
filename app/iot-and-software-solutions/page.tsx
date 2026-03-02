@@ -9,15 +9,15 @@ import ValuesSection from '@/components/sections/ValuesSection'
 import CTASection from '@/components/sections/CTASection'
 
 export const metadata: Metadata = {
-  title: 'Best Website Development, Digital Marketing & Mobile App Company in India | Vanspire',
+  title: 'Top IoT and Software Solutions Company | Vanspire Innovations',
   description:
-    'Vanspire is the top choice for software solutions, website development, mobile apps, and digital marketing in India and Kerala, delivering scalable cloud and IoT solutions.',
+    'Vanspire provides industry-leading IoT solutions, enterprise software, and scalable technology infrastructure designed for long-term growth and digital transformation.',
   alternates: {
-    canonical: '/',
+    canonical: '/iot-and-software-solutions',
   },
 }
 
-export default function HomePage() {
+export default function IotSoftwareSolutionsPage() {
   return (
     <>
       <HomeHero />
