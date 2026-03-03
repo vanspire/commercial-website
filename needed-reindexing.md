@@ -1,4 +1,4 @@
-🔴 Resubmit These (New pages — not previously indexed)
+🔴 Resubmit These (New pages - not previously indexed)
 URL
 https://vanspire.in/services,
 https://vanspire.in/services/digital-solutions/web-platform-development,
@@ -12,5 +12,5 @@ https://vanspire.in/services/integration/enterprise-system-integration
 🟡 Also Resubmit These (Existing pages that changed)
 URL	What Changed
 https://vanspire.in/,	Homepage nav changed (Ventures removed)
-https://vanspire.in/sitemap.xml,	Resubmit the sitemap itself — new URLs added
-Everything else (About, Insights, Contact, Ventures, legal pages) is unchanged — no need to touch those.
+https://vanspire.in/sitemap.xml,	Resubmit the sitemap itself - new URLs added
+Everything else (About, Insights, Contact, Ventures, legal pages) is unchanged - no need to touch those.

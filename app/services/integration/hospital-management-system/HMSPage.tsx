@@ -10,49 +10,49 @@ const modules = [
   {
     id: 'op',
     title: 'Outpatient (OP)',
-    description: 'Complete outpatient management — appointment scheduling, doctor availability, registration, consultation workflow, prescription generation, and follow-up scheduling in a unified clinical interface.',
+    description: 'Complete outpatient management - appointment scheduling, doctor availability, registration, consultation workflow, prescription generation, and follow-up scheduling in a unified clinical interface.',
     features: ['Online & in-person appointment booking', 'Doctor schedule & availability management', 'Digital consultation records', 'e-Prescription with drug database', 'Token display & queue management'],
   },
   {
     id: 'ip',
     title: 'Inpatient (IP)',
-    description: 'End-to-end inpatient admission management — from bed allocation and ward management to nursing workflows, discharge planning, and inter-department coordination.',
+    description: 'End-to-end inpatient admission management - from bed allocation and ward management to nursing workflows, discharge planning, and inter-department coordination.',
     features: ['Bed management & ward allocation', 'Nursing station workflows', 'Daily clinical charting', 'Discharge summary generation', 'Diet & meal management'],
   },
   {
     id: 'pharmacy',
     title: 'Pharmacy',
-    description: 'Integrated pharmacy management with complete inventory control, prescription processing, drug interaction alerts, and supplier management — connected to clinical modules for zero data re-entry.',
+    description: 'Integrated pharmacy management with complete inventory control, prescription processing, drug interaction alerts, and supplier management - connected to clinical modules for zero data re-entry.',
     features: ['e-Prescription integration', 'Drug inventory & expiry management', 'Drug interaction alerts', 'Supplier & purchase orders', 'FIFO dispensing'],
   },
   {
     id: 'billing',
     title: 'Billing & Finance',
-    description: 'Comprehensive revenue management from service billing to insurance claims processing — designed to reduce revenue leakage and accelerate collections.',
+    description: 'Comprehensive revenue management from service billing to insurance claims processing - designed to reduce revenue leakage and accelerate collections.',
     features: ['OP & IP billing automation', 'Insurance & TPA management', 'Credit facility management', 'Collection dashboards', 'GST-compliant invoicing'],
   },
   {
     id: 'lab',
     title: 'Laboratory (LIMS)',
-    description: 'Full laboratory information management — test requisition, sample tracking, result entry, verification workflow, and automated report delivery to clinicians and patients.',
+    description: 'Full laboratory information management - test requisition, sample tracking, result entry, verification workflow, and automated report delivery to clinicians and patients.',
     features: ['Test request & sample tracking', 'Result entry & validation', 'Critical value alerting', 'Lab report generation & delivery', 'Machine interface integration (HL7)'],
   },
   {
     id: 'radiology',
     title: 'Radiology & Imaging',
-    description: 'Radiology workflow management from requisition to report — integrated with PACS systems for image storage and retrieval, with radiologist reporting tools and automated delivery.',
+    description: 'Radiology workflow management from requisition to report - integrated with PACS systems for image storage and retrieval, with radiologist reporting tools and automated delivery.',
     features: ['Radiology order management', 'PACS/DICOM integration', 'Radiologist reporting interface', 'Film tracking & control', 'Automated report delivery'],
   },
   {
     id: 'admin',
     title: 'Administration',
-    description: 'Complete back-office administration — staff management, payroll, leave, procurement, asset management, and facility operations in a unified administrative environment.',
+    description: 'Complete back-office administration - staff management, payroll, leave, procurement, asset management, and facility operations in a unified administrative environment.',
     features: ['Staff & HR management', 'Payroll integration', 'Procurement & vendors', 'Asset & equipment management', 'Facility & housekeeping management'],
   },
   {
     id: 'reports',
     title: 'Analytics & Reports',
-    description: 'Real-time operational dashboards and regulatory reporting for hospital management — financial performance, clinical productivity, bed occupancy, and custom report builders.',
+    description: 'Real-time operational dashboards and regulatory reporting for hospital management - financial performance, clinical productivity, bed occupancy, and custom report builders.',
     features: ['Real-time operational dashboards', 'Financial performance reports', 'Clinical productivity metrics', 'Regulatory & compliance reports', 'Custom report builder'],
   },
 ]
@@ -198,7 +198,7 @@ export default function HMSPage() {
                 </h1>
                 <p className="text-[1.1rem] font-light text-brand-muted mb-4">Hospital Management System</p>
                 <p className="text-[17px] font-light text-brand-muted leading-[1.8] mb-8 max-w-xl">
-                  A complete, enterprise-grade SaaS platform engineered for modern healthcare facilities — from small clinics to multi-facility hospital networks. One integrated system for every clinical, administrative, and financial workflow.
+                  A complete, enterprise-grade SaaS platform engineered for modern healthcare facilities - from small clinics to multi-facility hospital networks. One integrated system for every clinical, administrative, and financial workflow.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/contact" className="inline-flex items-center gap-3 h-[50px] px-8 bg-brand-black text-white text-[14px] font-medium hover:bg-brand-muted transition-all duration-300">
@@ -248,10 +248,10 @@ export default function HMSPage() {
             </h2>
             <div className="space-y-5 text-[16px] font-light text-brand-muted leading-[1.85]">
               <p>
-                Most hospitals operate across three to five disconnected software systems — a billing tool that doesn't talk to clinical records, a pharmacy system that requires manual updates from prescriptions, and an administrative platform that operates entirely independently. The result is data silos, manual reconciliation, revenue leakage, and clinical staff who spend more time navigating software than treating patients.
+                Most hospitals operate across three to five disconnected software systems - a billing tool that doesn't talk to clinical records, a pharmacy system that requires manual updates from prescriptions, and an administrative platform that operates entirely independently. The result is data silos, manual reconciliation, revenue leakage, and clinical staff who spend more time navigating software than treating patients.
               </p>
               <p>
-                Vanspire HMS is a proprietary, purpose-built SaaS platform that unifies every clinical, administrative, and financial workflow in a single integrated system. Built from the ground up for Indian healthcare workflows, regulatory requirements, and operational realities — HMS is not an adaptation of generic ERP software. It is healthcare management software designed by people who understand healthcare operations.
+                Vanspire HMS is a proprietary, purpose-built SaaS platform that unifies every clinical, administrative, and financial workflow in a single integrated system. Built from the ground up for Indian healthcare workflows, regulatory requirements, and operational realities - HMS is not an adaptation of generic ERP software. It is healthcare management software designed by people who understand healthcare operations.
               </p>
               <p>
                 The system is built cloud-native, deployed on secure, India-regional infrastructure, and designed to scale from a single-specialty clinic to a multi-facility hospital network without architectural change.
@@ -270,7 +270,7 @@ export default function HMSPage() {
               Every clinical and administrative function, integrated.
             </h2>
             <p className="text-[15px] font-light text-brand-muted mb-12 max-w-2xl">
-              Each module is independently functional and deeply integrated with all others — data entered once flows across the entire system.
+              Each module is independently functional and deeply integrated with all others - data entered once flows across the entire system.
             </p>
           </FadeInView>
           <div className="space-y-2">
@@ -291,9 +291,9 @@ export default function HMSPage() {
                 Cloud-native. API-first. Built to scale.
               </h2>
               <div className="space-y-5 text-[15px] font-light text-brand-muted leading-[1.85]">
-                <p>Vanspire HMS is built on a microservices architecture — each clinical domain is an independently deployable service with its own data store and API surface. This enables hospital-specific module activation, isolated scaling during high-demand periods, and zero-downtime feature updates.</p>
+                <p>Vanspire HMS is built on a microservices architecture - each clinical domain is an independently deployable service with its own data store and API surface. This enables hospital-specific module activation, isolated scaling during high-demand periods, and zero-downtime feature updates.</p>
                 <p>The API layer is built on OpenAPI 3.0 specifications, enabling integration with medical devices, third-party diagnostic systems, insurance portals, and custom hospital systems through standardised, documented contracts.</p>
-                <p>The frontend is designed mobile-first — accessible on tablets at nursing stations, smartphones for field clinicians, and desktop workstations for administration teams — with a single codebase and consistent experience across surfaces.</p>
+                <p>The frontend is designed mobile-first - accessible on tablets at nursing stations, smartphones for field clinicians, and desktop workstations for administration teams - with a single codebase and consistent experience across surfaces.</p>
               </div>
             </FadeInView>
             <FadeInView delay={0.15}>
@@ -330,7 +330,7 @@ export default function HMSPage() {
               Patient data requires uncompromising security.
             </h2>
             <p className="text-[15px] font-light text-brand-muted mb-12 max-w-2xl">
-              HMS is designed to meet the security expectations of enterprise healthcare — from data encryption to role-based access controls and full audit trails.
+              HMS is designed to meet the security expectations of enterprise healthcare - from data encryption to role-based access controls and full audit trails.
             </p>
           </FadeInView>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -393,9 +393,9 @@ export default function HMSPage() {
               Architected to grow with your organisation.
             </h2>
             <div className="space-y-5 text-[16px] font-light text-brand-muted leading-[1.85]">
-              <p>Vanspire HMS is designed to scale from a 20-bed clinic to a 2,000-bed multi-specialty hospital without platform change. The microservices architecture allows individual modules to scale independently — pharmacy during peak prescription hours, billing during morning discharge periods — without impacting the rest of the system.</p>
+              <p>Vanspire HMS is designed to scale from a 20-bed clinic to a 2,000-bed multi-specialty hospital without platform change. The microservices architecture allows individual modules to scale independently - pharmacy during peak prescription hours, billing during morning discharge periods - without impacting the rest of the system.</p>
               <p>Multi-facility support is built into the core data model. A hospital group operating across five cities can manage all locations from a single HMS instance, with facility-level data segregation, consolidated reporting across the group, and central procurement visibility.</p>
-              <p>Pricing scales with your usage — we operate a fair, transparent SaaS pricing model tied to bed count and active users, not to the number of integrations or modules you activate. Growth should not be penalised.</p>
+              <p>Pricing scales with your usage - we operate a fair, transparent SaaS pricing model tied to bed count and active users, not to the number of integrations or modules you activate. Growth should not be penalised.</p>
             </div>
           </FadeInView>
         </div>
@@ -413,7 +413,7 @@ export default function HMSPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { title: 'Multi-specialty Hospitals', body: 'Large hospitals with complex clinical workflows across 10+ specialties, 200+ beds, and multiple revenue cycle requirements benefit from HMS\'s comprehensive module coverage and deep integration between clinical and financial workflows.' },
-              { title: 'Specialty Clinics & Day Care', body: 'Focused facilities — orthopaedic clinics, IVF centres, dialysis centres — need purpose-configured modules without the overhead of unused features. HMS delivers configurable module activation to match your clinical scope.' },
+              { title: 'Specialty Clinics & Day Care', body: 'Focused facilities - orthopaedic clinics, IVF centres, dialysis centres - need purpose-configured modules without the overhead of unused features. HMS delivers configurable module activation to match your clinical scope.' },
               { title: 'Hospital Groups & Networks', body: 'Multi-facility healthcare groups centralise procurement, HR, finance, and clinical protocols across all facilities from a single HMS instance, with local operational autonomy maintained at the facility level.' },
               { title: 'Diagnostic Centres', body: 'Standalone or hospital-linked diagnostic centres benefit from Vanspire HMS\'s Laboratory Information System (LIMS) and Radiology modules, with online report delivery directly to patients and referring clinicians.' },
             ].map((uc, i) => (
@@ -463,7 +463,7 @@ export default function HMSPage() {
                 See Vanspire HMS<br />in your environment.
               </h2>
               <p className="text-[16px] font-light text-white/50 leading-[1.8] max-w-xl mb-10">
-                We offer structured product demonstrations tailored to your facility type, size, and specific operational challenges. Our team will walk through the modules most relevant to your use case — not a generic sales deck.
+                We offer structured product demonstrations tailored to your facility type, size, and specific operational challenges. Our team will walk through the modules most relevant to your use case - not a generic sales deck.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
                 {[

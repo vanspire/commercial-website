@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://vanspire.in'
 export const metadata: Metadata = {
   title: 'Hospital Management System – Enterprise Healthcare SaaS Platform | Vanspire',
   description:
-    'Vanspire HMS is a proprietary enterprise SaaS platform designed for modern healthcare facilities. Complete hospital management with OP, IP, Pharmacy, Billing, Laboratory, Radiology, and Admin modules — secure, scalable, and cloud-native.',
+    'Vanspire HMS is a proprietary enterprise SaaS platform designed for modern healthcare facilities. Complete hospital management with OP, IP, Pharmacy, Billing, Laboratory, Radiology, and Admin modules - secure, scalable, and cloud-native.',
   alternates: { canonical: '/services/integration/hospital-management-system' },
   openGraph: {
     title: 'Hospital Management System | Vanspire HMS',

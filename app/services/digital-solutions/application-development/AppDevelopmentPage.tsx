@@ -18,7 +18,7 @@ const deliverables = [
 ]
 
 const useCases = [
-  { title: 'Field Operations Apps', body: 'Mobile applications for field teams — logistics, inspection, maintenance, and service workflows — built to operate reliably in low-connectivity environments.' },
+  { title: 'Field Operations Apps', body: 'Mobile applications for field teams - logistics, inspection, maintenance, and service workflows - built to operate reliably in low-connectivity environments.' },
   { title: 'Healthcare Companion Apps', body: 'Patient-facing and clinician-facing mobile tools tightly integrated with backend HMS or EMR platforms for real-time data access.' },
   { title: 'Enterprise Internal Tools', body: 'Organisation-wide apps replacing legacy desktop processes with accessible, secure, mobile-first interfaces.' },
   { title: 'Customer-Facing Product Apps', body: 'B2C and B2B customer applications driving engagement, transactions, and long-term retention through thoughtful UX and performance.' },
@@ -126,7 +126,7 @@ export default function AppDevelopmentPage() {
                   Application<br />Development
                 </h1>
                 <p className="text-[17px] font-light text-brand-muted leading-[1.8] mb-8 max-w-xl">
-                  Cross-platform and native mobile applications built around real enterprise workflows — not wireframe concepts. We engineer for reliability, security, and the operational realities your teams face daily.
+                  Cross-platform and native mobile applications built around real enterprise workflows - not wireframe concepts. We engineer for reliability, security, and the operational realities your teams face daily.
                 </p>
                 <Link href="/contact" className="inline-flex items-center gap-3 h-[50px] px-8 bg-brand-black text-white text-[14px] font-medium hover:bg-brand-muted transition-all duration-300">
                   Discuss Your App <span>→</span>
@@ -146,9 +146,9 @@ export default function AppDevelopmentPage() {
               Enterprise apps fail when they're built for demos, not operations.
             </h2>
             <div className="space-y-4 text-[16px] font-light text-brand-muted leading-[1.85]">
-              <p>Many enterprise mobile applications fail not in the demo environment but in production — where offline connectivity, data synchronisation, device fragmentation, and security compliance become the real requirements.</p>
+              <p>Many enterprise mobile applications fail not in the demo environment but in production - where offline connectivity, data synchronisation, device fragmentation, and security compliance become the real requirements.</p>
               <p>The gap between an app that looks polished and one that actually performs in the hands of 500 field operatives is significant. Bridging that gap requires deep understanding of the operational context before writing a single line of code.</p>
-              <p>Vanspire approaches every application engagement with an operations-first mindset — understanding workflows, failure modes, and technical constraints before making architectural decisions.</p>
+              <p>Vanspire approaches every application engagement with an operations-first mindset - understanding workflows, failure modes, and technical constraints before making architectural decisions.</p>
             </div>
           </FadeInView>
         </div>
@@ -183,7 +183,7 @@ export default function AppDevelopmentPage() {
               <h2 className="text-[clamp(1.6rem,3vw,2.5rem)] font-light tracking-tighter text-brand-black mb-6">Built for production, not prototypes</h2>
               <div className="space-y-5 text-[15px] font-light text-brand-muted leading-[1.85]">
                 <p>We standardise on React Native for cross-platform development where code sharing is strategically valuable, and native Swift/Kotlin where platform-specific performance is non-negotiable.</p>
-                <p>Security is embedded at the application layer — certificate pinning, biometric authentication, encrypted local storage, and secure API communication are default architecture decisions, not optional additions.</p>
+                <p>Security is embedded at the application layer - certificate pinning, biometric authentication, encrypted local storage, and secure API communication are default architecture decisions, not optional additions.</p>
                 <p>For enterprise deployments, we configure Mobile Device Management (MDM) compatibility and enterprise distribution pipelines ensuring controlled, auditable releases.</p>
               </div>
             </FadeInView>

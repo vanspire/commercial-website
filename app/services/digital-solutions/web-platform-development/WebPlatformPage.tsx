@@ -18,7 +18,7 @@ const deliverables = [
 ]
 
 const useCases = [
-  { title: 'Enterprise Portals', body: 'Internal operations portals used by hundreds of staff across multiple departments — built for reliability and role-based access control.' },
+  { title: 'Enterprise Portals', body: 'Internal operations portals used by hundreds of staff across multiple departments - built for reliability and role-based access control.' },
   { title: 'SaaS Product Platforms', body: 'Multi-tenant platforms designed to serve thousands of end users with consistent performance and secure data isolation.' },
   { title: 'B2B Commerce Systems', body: 'Complex procurement and transaction platforms integrating with ERP, inventory, and logistics systems.' },
   { title: 'Public Sector Platforms', body: 'Large-scale citizen-facing platforms demanding high availability, accessibility compliance, and data sovereignty.' },
@@ -168,17 +168,17 @@ export default function WebPlatformPage() {
             <FadeInView>
               <p className="text-label text-brand-muted mb-5">The Challenge</p>
               <h2 className="text-[clamp(1.6rem,3vw,2.5rem)] font-light tracking-tighter text-brand-black mb-6">
-                Most web platforms underdeliver — not because of missing features, but because of missing foundations.
+                Most web platforms underdeliver - not because of missing features, but because of missing foundations.
               </h2>
               <div className="space-y-4 text-[16px] font-light text-brand-muted leading-[1.85]">
                 <p>
-                  Enterprises frequently adopt web platforms that solve today's problem while creating tomorrow's liability. Built quickly, structured poorly, and scaled painfully — the accumulation of technical debt becomes a competitive disadvantage.
+                  Enterprises frequently adopt web platforms that solve today's problem while creating tomorrow's liability. Built quickly, structured poorly, and scaled painfully - the accumulation of technical debt becomes a competitive disadvantage.
                 </p>
                 <p>
                   The core issue is rarely technology. It is architecture. A platform built without long-horizon thinking will require expensive re-architecture within 18–24 months. Vanspire's approach prevents this by making architectural rigour the default, not the exception.
                 </p>
                 <p>
-                  We believe a well-structured web platform is a strategic business asset — one that reduces operational friction, accelerates team velocity, and compounds value over time.
+                  We believe a well-structured web platform is a strategic business asset - one that reduces operational friction, accelerates team velocity, and compounds value over time.
                 </p>
               </div>
             </FadeInView>
@@ -227,7 +227,7 @@ export default function WebPlatformPage() {
                   Our preferred stack centres on Next.js for server-side rendering and edge performance, TypeScript for type safety at scale, and purpose-selected databases (PostgreSQL, MongoDB, Redis) matched to access patterns.
                 </p>
                 <p>
-                  We implement CI/CD pipelines, automated testing suites, and observability tooling from day one — because production reliability is not an afterthought.
+                  We implement CI/CD pipelines, automated testing suites, and observability tooling from day one - because production reliability is not an afterthought.
                 </p>
               </div>
             </FadeInView>

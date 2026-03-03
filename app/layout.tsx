@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import ChatBot from "@/components/chat/ChatBot";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -145,6 +146,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
         </LayoutWrapper>
         <Footer />
+        <ChatBot />
         <Analytics />
         <SpeedInsights />
       </body>

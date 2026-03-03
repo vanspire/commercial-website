@@ -122,7 +122,7 @@ export default function CloudInfrastructurePage() {
                   Cloud<br />Infrastructure
                 </h1>
                 <p className="text-[17px] font-light text-brand-muted leading-[1.8] mb-8 max-w-xl">
-                  Resilient, secure, and cost-efficient cloud architecture across AWS, Azure, and GCP — engineered for mission-critical workloads and built to scale without operational surprises.
+                  Resilient, secure, and cost-efficient cloud architecture across AWS, Azure, and GCP - engineered for mission-critical workloads and built to scale without operational surprises.
                 </p>
                 <Link href="/contact" className="inline-flex items-center gap-3 h-[50px] px-8 bg-brand-black text-white text-[14px] font-medium hover:bg-brand-muted transition-all duration-300">
                   Assess Your Infrastructure <span>→</span>
@@ -143,8 +143,8 @@ export default function CloudInfrastructurePage() {
             </h2>
             <div className="space-y-4 text-[16px] font-light text-brand-muted leading-[1.85]">
               <p>The promise of cloud infrastructure is operational agility and elastic scalability. The reality, for many organisations, is spiralling costs, fragile architectures, and security compliance gaps that surface at the worst possible moments.</p>
-              <p>Poorly structured cloud environments accrue technical debt faster than any other part of the stack. A single poorly-designed VPC, over-provisioned EC2 fleet, or missing IAM policy can cost hundreds of thousands — in spend, in downtime, or in compliance remediation.</p>
-              <p>Vanspire designs cloud infrastructure with the discipline of long-term operational ownership. Every decision is documented, every resource is tagged, and every security control is implemented deliberately — not opportunistically.</p>
+              <p>Poorly structured cloud environments accrue technical debt faster than any other part of the stack. A single poorly-designed VPC, over-provisioned EC2 fleet, or missing IAM policy can cost hundreds of thousands - in spend, in downtime, or in compliance remediation.</p>
+              <p>Vanspire designs cloud infrastructure with the discipline of long-term operational ownership. Every decision is documented, every resource is tagged, and every security control is implemented deliberately - not opportunistically.</p>
             </div>
           </FadeInView>
         </div>
@@ -178,9 +178,9 @@ export default function CloudInfrastructurePage() {
               <p className="text-label text-brand-muted mb-5">Technical Approach</p>
               <h2 className="text-[clamp(1.6rem,3vw,2.5rem)] font-light tracking-tighter text-brand-black mb-6">Infrastructure as code. Security as default.</h2>
               <div className="space-y-5 text-[15px] font-light text-brand-muted leading-[1.85]">
-                <p>We implement all infrastructure through code — Terraform or Pulumi — ensuring every resource is version-controlled, reviewable, and reproducible. No click-ops. No undocumented resources.</p>
+                <p>We implement all infrastructure through code - Terraform or Pulumi - ensuring every resource is version-controlled, reviewable, and reproducible. No click-ops. No undocumented resources.</p>
                 <p>Security controls are not retrofitted. IAM least-privilege, network segmentation, encryption at rest and in transit, secrets management, and vulnerability scanning are baseline requirements on every engagement.</p>
-                <p>Cost governance is built in from the start — resource tagging taxonomies, budget alerts, right-sizing analysis, and reserved capacity planning prevent the cloud waste that compounds silently over months.</p>
+                <p>Cost governance is built in from the start - resource tagging taxonomies, budget alerts, right-sizing analysis, and reserved capacity planning prevent the cloud waste that compounds silently over months.</p>
               </div>
             </FadeInView>
             <FadeInView delay={0.15}>

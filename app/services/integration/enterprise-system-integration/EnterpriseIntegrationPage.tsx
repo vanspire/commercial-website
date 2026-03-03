@@ -109,7 +109,7 @@ export default function EnterpriseIntegrationPage() {
                   Enterprise System<br />Integration
                 </h1>
                 <p className="text-[17px] font-light text-brand-muted leading-[1.8] mb-8 max-w-xl">
-                  Seamless connection across complex enterprise technology stacks — APIs, middleware, event-driven architectures, and real-time data synchronisation that eliminates operational silos.
+                  Seamless connection across complex enterprise technology stacks - APIs, middleware, event-driven architectures, and real-time data synchronisation that eliminates operational silos.
                 </p>
                 <Link href="/contact" className="inline-flex items-center gap-3 h-[50px] px-8 bg-brand-black text-white text-[14px] font-medium hover:bg-brand-muted transition-all duration-300">
                   Map Your Integration <span>→</span>
@@ -130,7 +130,7 @@ export default function EnterpriseIntegrationPage() {
             </h2>
             <div className="space-y-4 text-[16px] font-light text-brand-muted leading-[1.85]">
               <p>The average enterprise operates across 15–30 distinct software systems. When these systems don't communicate, data is manually rekeyed, decisions are made on stale information, and teams spend hours each week on reconciliation tasks that should not exist.</p>
-              <p>Point-to-point integrations — the instinctive solution — create a web of dependencies that becomes progressively more fragile and expensive to maintain. Every new system addition multiplies the complexity.</p>
+              <p>Point-to-point integrations - the instinctive solution - create a web of dependencies that becomes progressively more fragile and expensive to maintain. Every new system addition multiplies the complexity.</p>
               <p>Vanspire designs enterprise integration architectures that are structured, maintainable, and built to scale as your system landscape evolves. We implement integration layers that reduce coupling, improve observability, and create systems that actually behave as one entity.</p>
             </div>
           </FadeInView>
@@ -170,9 +170,9 @@ export default function EnterpriseIntegrationPage() {
               <p className="text-label text-brand-muted mb-5">Technical Approach</p>
               <h2 className="text-[clamp(1.6rem,3vw,2.5rem)] font-light tracking-tighter text-brand-black mb-6">Hub architecture. Loose coupling. High resilience.</h2>
               <div className="space-y-4 text-[15px] font-light text-brand-muted leading-[1.85]">
-                <p>We favour hub-and-spoke integration architectures over point-to-point meshes — centralising integration logic, enforcing data contracts, and providing a single observability surface for all system interactions.</p>
+                <p>We favour hub-and-spoke integration architectures over point-to-point meshes - centralising integration logic, enforcing data contracts, and providing a single observability surface for all system interactions.</p>
                 <p>Where event-driven patterns suit the operational model, we implement event streaming architectures using Apache Kafka or managed equivalents, enabling real-time data propagation with the resilience and replayability enterprises require.</p>
-                <p>Every integration is version-controlled, documented, and monitored with appropriate alerting — so failures surface immediately, before they cascade through dependent systems.</p>
+                <p>Every integration is version-controlled, documented, and monitored with appropriate alerting - so failures surface immediately, before they cascade through dependent systems.</p>
               </div>
             </FadeInView>
             <FadeInView delay={0.15}>

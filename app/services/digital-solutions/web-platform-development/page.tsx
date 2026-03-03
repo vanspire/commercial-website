@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://vanspire.in'
 export const metadata: Metadata = {
   title: 'Web Platform Development – Enterprise-Grade Digital Platforms | Vanspire',
   description:
-    'Vanspire builds scalable, high-performance web platforms for enterprise organisations. From architecture design to deployment — structured for long-term growth and operational depth.',
+    'Vanspire builds scalable, high-performance web platforms for enterprise organisations. From architecture design to deployment - structured for long-term growth and operational depth.',
   alternates: { canonical: '/services/digital-solutions/web-platform-development' },
   openGraph: {
     title: 'Web Platform Development | Vanspire',

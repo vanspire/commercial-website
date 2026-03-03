@@ -193,7 +193,7 @@ export default function ServicesHubPage() {
           <FadeInView delay={0.2}>
             <p className="text-[17px] font-light text-brand-muted leading-[1.8] max-w-2xl mb-10">
               We build and integrate enterprise-grade technology systems designed for long-term operational depth.
-              From digital platforms to complex systems integration — our work is structured, deliberate, and built to scale.
+              From digital platforms to complex systems integration - our work is structured, deliberate, and built to scale.
             </p>
           </FadeInView>
           <FadeInView delay={0.3}>
@@ -237,7 +237,7 @@ export default function ServicesHubPage() {
                   Digital Solutions
                 </h2>
                 <p className="text-[15px] font-light text-brand-muted leading-[1.75] max-w-md">
-                  End-to-end digital product and platform engineering — from conception to deployment and beyond.
+                  End-to-end digital product and platform engineering - from conception to deployment and beyond.
                 </p>
               </div>
             </div>
@@ -286,7 +286,7 @@ export default function ServicesHubPage() {
             {[
               { num: '01', heading: 'Systems Thinking', body: 'Every engagement is approached as an interconnected system, not a collection of isolated deliverables.' },
               { num: '02', heading: 'Enterprise Rigour', body: 'Our processes, documentation, and delivery standards meet the expectations of complex organisations.' },
-              { num: '03', heading: 'Long-horizon Design', body: 'We build for what comes next — platforms designed to grow, adapt, and remain relevant over time.' },
+              { num: '03', heading: 'Long-horizon Design', body: 'We build for what comes next - platforms designed to grow, adapt, and remain relevant over time.' },
             ].map((item, i) => (
               <FadeInView key={item.num} delay={i * 0.12}>
                 <p className="text-[11px] uppercase tracking-widest text-brand-muted mb-3">{item.num}</p>

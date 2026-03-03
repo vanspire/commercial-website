@@ -7,7 +7,7 @@ import FadeInView from '@/components/ui/FadeInView'
 import ServiceCTA from '@/components/services/ServiceCTA'
 
 const erpPhases = [
-  { num: '01', title: 'Requirements Analysis', body: 'Deep discovery of current business processes, pain points, and strategic objectives — the foundation of a successful ERP engagement.' },
+  { num: '01', title: 'Requirements Analysis', body: 'Deep discovery of current business processes, pain points, and strategic objectives - the foundation of a successful ERP engagement.' },
   { num: '02', title: 'Platform Selection', body: 'Vendor-neutral evaluation of ERP platforms against your specific operational, budget, and scalability requirements.' },
   { num: '03', title: 'Implementation Design', body: 'Detailed system configuration design, integration architecture, data migration planning, and change impact analysis.' },
   { num: '04', title: 'Build & Configure', body: 'Controlled configuration, customisation, and integration development with continuous testing and stakeholder validation.' },
@@ -100,7 +100,7 @@ export default function ERPImplementationPage() {
                   ERP<br />Implementation
                 </h1>
                 <p className="text-[17px] font-light text-brand-muted leading-[1.8] mb-8 max-w-xl">
-                  End-to-end ERP deployment, configuration, and change management for enterprises seeking a single source of operational truth — delivered without the failures that define most ERP programmes.
+                  End-to-end ERP deployment, configuration, and change management for enterprises seeking a single source of operational truth - delivered without the failures that define most ERP programmes.
                 </p>
                 <Link href="/contact" className="inline-flex items-center gap-3 h-[50px] px-8 bg-brand-black text-white text-[14px] font-medium hover:bg-brand-muted transition-all duration-300">
                   Discuss Your ERP Requirements <span>→</span>
@@ -117,11 +117,11 @@ export default function ERPImplementationPage() {
           <FadeInView>
             <p className="text-label text-brand-muted mb-5">The Challenge</p>
             <h2 className="text-[clamp(1.6rem,3vw,2.5rem)] font-light tracking-tighter text-brand-black mb-6">
-              ERP implementations fail at an alarming rate — and the causes are almost always predictable.
+              ERP implementations fail at an alarming rate - and the causes are almost always predictable.
             </h2>
             <div className="space-y-4 text-[16px] font-light text-brand-muted leading-[1.85]">
-              <p>Research consistently indicates that over 50% of ERP implementations run significantly over budget, over time, or fail to deliver expected outcomes. The root causes are not mysterious — inadequate requirements definition, underestimated data complexity, insufficient change management, and over-customisation top the list.</p>
-              <p>Vanspire approaches ERP engagement with a fundamentally different lens. We spend proportionally more time on the front end — understanding process, data, and organisational readiness — because every hour invested pre-implementation saves five in remediation.</p>
+              <p>Research consistently indicates that over 50% of ERP implementations run significantly over budget, over time, or fail to deliver expected outcomes. The root causes are not mysterious - inadequate requirements definition, underestimated data complexity, insufficient change management, and over-customisation top the list.</p>
+              <p>Vanspire approaches ERP engagement with a fundamentally different lens. We spend proportionally more time on the front end - understanding process, data, and organisational readiness - because every hour invested pre-implementation saves five in remediation.</p>
               <p>Our implementation methodology is designed to compress the gap between expectation and operational reality, delivering systems that people actually use and that generate the business value the investment promised.</p>
             </div>
           </FadeInView>
@@ -215,7 +215,7 @@ export default function ERPImplementationPage() {
 
       <ServiceCTA
         headline="Let's design your ERP programme."
-        subtext="We start with an honest assessment of your readiness, requirements, and risks — before proposing a single platform or committing to a timeline."
+        subtext="We start with an honest assessment of your readiness, requirements, and risks - before proposing a single platform or committing to a timeline."
         primaryLabel="Begin the Assessment"
         primaryHref="/contact"
         secondaryLabel="Back to Services"

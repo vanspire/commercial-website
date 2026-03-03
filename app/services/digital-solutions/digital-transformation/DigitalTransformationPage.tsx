@@ -9,9 +9,9 @@ import ServiceCTA from '@/components/services/ServiceCTA'
 const phases = [
   { num: '01', title: 'Discovery & Assessment', body: 'Comprehensive audit of existing systems, processes, and organisational readiness. Identifies the true cost of the status quo.' },
   { num: '02', title: 'Strategy & Roadmap', body: 'A prioritised, phased transformation roadmap aligned to business objectives, budget realities, and risk tolerance.' },
-  { num: '03', title: 'Architecture & Design', body: 'Target architecture definition — the blueprint for the future-state digital environment your organisation is building toward.' },
+  { num: '03', title: 'Architecture & Design', body: 'Target architecture definition - the blueprint for the future-state digital environment your organisation is building toward.' },
   { num: '04', title: 'Implementation', body: 'Controlled, iterative execution with continuous validation against business outcomes, not just technical milestones.' },
-  { num: '05', title: 'Change Management', body: 'People and process transformation at pace with the technology — because adoption determines whether change delivers value.' },
+  { num: '05', title: 'Change Management', body: 'People and process transformation at pace with the technology - because adoption determines whether change delivers value.' },
   { num: '06', title: 'Optimise & Iterate', body: 'Post-implementation refinement based on operational data, user feedback, and evolving business requirements.' },
 ]
 
@@ -128,7 +128,7 @@ export default function DigitalTransformationPage() {
                   Digital<br />Transformation
                 </h1>
                 <p className="text-[17px] font-light text-brand-muted leading-[1.8] mb-8 max-w-xl">
-                  Strategic modernisation of legacy systems and processes into agile, scalable, and technology-native operations — executed with methodical rigour, not transformation theatre.
+                  Strategic modernisation of legacy systems and processes into agile, scalable, and technology-native operations - executed with methodical rigour, not transformation theatre.
                 </p>
                 <Link href="/contact" className="inline-flex items-center gap-3 h-[50px] px-8 bg-brand-black text-white text-[14px] font-medium hover:bg-brand-muted transition-all duration-300">
                   Begin Your Assessment <span>→</span>
@@ -148,9 +148,9 @@ export default function DigitalTransformationPage() {
               Most transformation programmes deliver change. Far fewer deliver value.
             </h2>
             <div className="space-y-4 text-[16px] font-light text-brand-muted leading-[1.85]">
-              <p>Digital transformation has become a ubiquitous term — and with ubiquity has come dilution. The majority of transformation programmes fail to deliver their promised business outcomes, not because of technology failure, but because of insufficient planning, misaligned incentives, and inadequate attention to human factors.</p>
+              <p>Digital transformation has become a ubiquitous term - and with ubiquity has come dilution. The majority of transformation programmes fail to deliver their promised business outcomes, not because of technology failure, but because of insufficient planning, misaligned incentives, and inadequate attention to human factors.</p>
               <p>The organisations that succeed in transformation share a common trait: they treat it as a strategic programme of work, not a technology procurement exercise. Technology is the enabler. The transformation is organisational.</p>
-              <p>Vanspire structures transformation engagements around business outcomes, not deliverables. Every technical decision is tied to a measurable operational improvement — cost reduction, cycle time compression, error rate elimination, or revenue enablement.</p>
+              <p>Vanspire structures transformation engagements around business outcomes, not deliverables. Every technical decision is tied to a measurable operational improvement - cost reduction, cycle time compression, error rate elimination, or revenue enablement.</p>
             </div>
           </FadeInView>
         </div>
@@ -182,8 +182,8 @@ export default function DigitalTransformationPage() {
             <p className="text-label text-brand-muted mb-5">What We Deliver</p>
             <h2 className="text-[clamp(1.6rem,3vw,2.5rem)] font-light tracking-tighter text-brand-black mb-8">Transformation across systems, processes, and operations</h2>
             <div className="space-y-4 text-[16px] font-light text-brand-muted leading-[1.85]">
-              <p>Transformation engagements with Vanspire deliver modernised technology infrastructure, re-engineered business processes, integrated data environments, and organisational capability uplift — structured and measurable at every stage.</p>
-              <p>We maintain a single transformation office function that spans technology delivery, process design, change management, and stakeholder communication — reducing the coordination overhead that typically erodes transformation programmes.</p>
+              <p>Transformation engagements with Vanspire deliver modernised technology infrastructure, re-engineered business processes, integrated data environments, and organisational capability uplift - structured and measurable at every stage.</p>
+              <p>We maintain a single transformation office function that spans technology delivery, process design, change management, and stakeholder communication - reducing the coordination overhead that typically erodes transformation programmes.</p>
             </div>
           </FadeInView>
           <FadeInView delay={0.15}>
@@ -226,7 +226,7 @@ export default function DigitalTransformationPage() {
 
       <ServiceCTA
         headline="Transformation begins with clarity."
-        subtext="We start every engagement with an honest assessment of where you are and what change will actually cost — in time, money, and organisational energy. The result is a transformation that's scoped to succeed."
+        subtext="We start every engagement with an honest assessment of where you are and what change will actually cost - in time, money, and organisational energy. The result is a transformation that's scoped to succeed."
         primaryLabel="Start the Conversation"
         primaryHref="/contact"
         secondaryLabel="Back to Services"
