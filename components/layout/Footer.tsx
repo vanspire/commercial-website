@@ -6,13 +6,17 @@ import { MapPin, Mail } from 'lucide-react'
 
 const footerLinks = {
   company: [
-    { name: 'About Vanspire', href: '/about' },
+    { name: 'About', href: '/about' },
     { name: 'Ventures', href: '/ventures' },
     { name: 'Insights', href: '/insights' },
     { name: 'Contact', href: '/contact' },
   ],
-  ventures: [
-    { name: 'Technology', href: '/ventures/technology' },
+  services: [
+    { name: 'Digital Solutions', href: '/services' },
+    { name: 'Integration & Implementation', href: '/services' },
+    { name: 'ERP Implementation', href: '/services/integration/erp-implementation' },
+    { name: 'Hospital Management System', href: '/services/integration/hospital-management-system' },
+    { name: 'Enterprise System Integration', href: '/services/integration/enterprise-system-integration' },
   ],
   legal: [
     { name: 'Terms & Conditions', href: '/terms' },
@@ -53,7 +57,6 @@ export default function Footer() {
               Structured for the long term.
             </p>
 
-            {/* Contact info */}
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-white/40 text-[14px] font-light">
                 <MapPin size={14} className="flex-shrink-0" />
@@ -102,6 +105,7 @@ export default function Footer() {
 
         {/* Link columns */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-10 pt-12 border-t border-white/10">
+          {/* Column 1: Company */}
           <div>
             <p className="text-[11px] uppercase tracking-widest text-white/30 mb-5">Company</p>
             <ul className="space-y-3">
@@ -118,10 +122,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <p className="text-[11px] uppercase tracking-widest text-white/30 mb-5">Ventures</p>
+          {/* Column 2: Services */}
+          <div className="col-span-2 md:col-span-1">
+            <p className="text-[11px] uppercase tracking-widest text-white/30 mb-5">Services</p>
             <ul className="space-y-3">
-              {footerLinks.ventures.map((item) => (
+              {footerLinks.services.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -131,14 +136,10 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <span className="text-[13px] font-light text-white/20 italic">
-                  More coming soon
-                </span>
-              </li>
             </ul>
           </div>
 
+          {/* Column 3: Legal */}
           <div>
             <p className="text-[11px] uppercase tracking-widest text-white/30 mb-5">Legal</p>
             <ul className="space-y-3">
