@@ -77,7 +77,6 @@ prisma/*.db-journal
 # 9️⃣ Build Artifacts
 # --------------------------------------------
 dist/
-lib/
 .eslintcache
 .cache/
 
