@@ -27,8 +27,8 @@ export default function HomeHero() {
       </motion.div>
 
       {/* Gradient overlays */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#060608]/60 via-[#060608]/40 to-[#060608]" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#060608]/80 via-transparent to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#060608]/40 via-[#060608]/20 to-[#060608]" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#060608]/60 via-transparent to-transparent" />
 
       {/* Subtle animated grid */}
       <motion.div
@@ -54,7 +54,7 @@ export default function HomeHero() {
         </MotionWrapper>
 
         <MotionWrapper delay={0.2}>
-          <h1 className="text-[clamp(2.8rem,7vw,6.1rem)] font-light tracking-[-0.04em] text-white leading-[1.02] mb-6 max-w-5xl">
+          <h1 className="text-[clamp(2.8rem,7vw,5.8rem)] font-light tracking-[-0.04em] text-white leading-[1.02] mb-6 max-w-[65rem]">
             Building the Foundations<br />
             <em className="not-italic text-white/50">for Tomorrow's</em><br />
             Industries
@@ -90,7 +90,7 @@ export default function HomeHero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 z-10"
       >
         <div className="w-px h-16 bg-gradient-to-b from-white/30 to-transparent" />
         <span className="text-[10px] uppercase tracking-[0.2em] text-white/20">Scroll</span>

@@ -39,7 +39,7 @@ export default function Capabilities() {
     <section ref={ref} className="section-pad bg-brand-offwhite overflow-hidden">
       <div className="container-site">
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10 md:mb-20 items-end">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -72,10 +72,10 @@ export default function Capabilities() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="group bg-brand-offwhite p-10 md:p-12 hover:bg-white transition-colors duration-300"
+              className="group bg-brand-offwhite p-5 md:p-12 hover:bg-white transition-colors duration-300"
             >
               {/* Number */}
-              <span className="text-label text-brand-border block mb-6">
+              <span className="text-label text-brand-muted block mb-6">
                 {String(i + 1).padStart(2, '0')}
               </span>
 

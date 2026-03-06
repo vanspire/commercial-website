@@ -28,7 +28,7 @@ export default function Philosophy() {
   return (
     <section ref={ref} className="section-pad bg-white overflow-hidden">
       <div className="container-site">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 lg:gap-24">
 
           {/* Left - sticky-ish block */}
           <div className="lg:col-span-5">
@@ -87,10 +87,10 @@ export default function Philosophy() {
                   initial={{ opacity: 0, x: 40 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.7, delay: 0.2 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                  className="group py-10 border-b border-brand-border first:border-t"
+                  className="group py-10 border-b border-brand-border first:border-t-0 md:first:border-t"
                 >
-                  <div className="flex items-start gap-8">
-                    <span className="text-label text-brand-border w-8 flex-shrink-0 mt-1">
+                  <div className="flex items-start gap-4 md:gap-8">
+                    <span className="text-label text-brand-muted w-8 flex-shrink-0 mt-1">
                       {item.number}
                     </span>
                     <div>

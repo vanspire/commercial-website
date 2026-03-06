@@ -82,19 +82,19 @@ export default function Footer() {
             <h3 className="text-2xl md:text-3xl font-light tracking-tighter text-white mb-6 leading-tight">
               Thought leadership,<br />straight to your inbox.
             </h3>
-            <div className="flex gap-0 max-w-md">
+            <div className="flex gap-0 w-full sm:ml-0 sm:max-w-md">
               <input
                 type="email"
                 placeholder="Your email address"
                 value={email}
                 onChange={(e) => { setEmail(e.target.value); setError('') }}
                 disabled={subscribed}
-                className="flex-1 px-4 h-[48px] text-[14px] bg-white/5 border border-white/10 text-white placeholder-white/30 outline-none focus:border-white/30 transition-colors font-light"
+                className="flex-1 px-3 sm:px-4 h-[48px] text-[14px] bg-white/5 border border-white/10 text-white placeholder-white/30 outline-none focus:border-white/30 transition-colors font-light"
               />
               <button
                 onClick={handleSubscribe}
                 disabled={subscribed}
-                className="h-[48px] px-6 bg-white text-brand-black text-[13px] font-medium hover:bg-white/90 transition-colors disabled:opacity-60 flex-shrink-0"
+                className="h-[48px] px-4 sm:px-6 bg-white text-brand-black text-[13px] font-medium hover:bg-white/90 transition-colors disabled:opacity-60 flex-shrink-0"
               >
                 {subscribed ? 'Subscribed ✓' : 'Subscribe'}
               </button>
@@ -109,8 +109,8 @@ export default function Footer() {
           <div>
             <p className="text-[11px] uppercase tracking-widest text-white/30 mb-5">Company</p>
             <ul className="space-y-3">
-              {footerLinks.company.map((item) => (
-                <li key={item.name}>
+              {footerLinks.company.map((item, index) => (
+                <li className={`order-${index === 0 ? 2 : index === 1 ? 1 : 3}`} key={item.name}>
                   <Link
                     href={item.href}
                     className="text-[14px] font-light text-white/50 hover:text-white transition-colors duration-200"

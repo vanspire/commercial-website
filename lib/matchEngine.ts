@@ -78,7 +78,7 @@ function scoreEntry(
   for (const keyword of entry.keywords) {
     const kw = keyword.toLowerCase()
 
-    // Exact phrase match in normalised query — longer phrases score higher
+    // Exact phrase match in normalised query - longer phrases score higher
     if (normalizedQuery.includes(kw)) {
       score += kw.split(' ').length * 4
     } else {
@@ -137,7 +137,7 @@ export function findBestMatch(rawQuery: string): MatchResult {
     return { entry: bestEntry, score: bestScore, type: 'match' }
   }
 
-  // Fallback — below confidence threshold
+  // Fallback - below confidence threshold
   return {
     entry: {
       id: 'fallback',
@@ -145,7 +145,7 @@ export function findBestMatch(rawQuery: string): MatchResult {
       intent: [],
       summary: "I may not have full details on that just yet.",
       detailed:
-        "I may not have complete details on that topic yet, but our team would be happy to help. Vanspire covers Digital Solutions, ERP Implementation, Hospital Management Systems, Enterprise System Integration, and Cloud Infrastructure. Feel free to ask me about any of these — or reach out directly and we'll get back to you promptly.",
+        "I may not have complete details on that topic yet, but our team would be happy to help. Vanspire covers Digital Solutions, ERP Implementation, Hospital Management Systems, Enterprise System Integration, and Cloud Infrastructure. Feel free to ask me about any of these - or reach out directly and we'll get back to you promptly.",
       url: '/contact',
       cta: { label: 'Contact Our Team', href: '/contact' },
     },

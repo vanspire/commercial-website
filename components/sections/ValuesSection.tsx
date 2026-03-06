@@ -37,7 +37,7 @@ export default function ValuesSection() {
           initial={{ opacity: 0, scale: 1.02 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative mb-20 overflow-hidden"
+          className="relative mb-8 md:mb-20 overflow-hidden"
         >
           <img
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80"
@@ -58,9 +58,9 @@ export default function ValuesSection() {
               className="group relative bg-[#060608] px-8 py-10 overflow-hidden"
             >
               {/* Hover fill */}
-              <div className="absolute inset-0 bg-white/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-white/[0.1] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <span className="text-label text-white/20 block mb-4">
+              <span className="text-label text-white/30 block mb-4">
                 {String(i + 1).padStart(2, '0')}
               </span>
               <p className="text-[16px] md:text-[17px] font-light text-white leading-snug tracking-tight">
@@ -75,7 +75,7 @@ export default function ValuesSection() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="mt-12 text-[13px] font-light text-white/25 text-center italic"
+          className="mt-12 text-[13px] font-light text-white/50 text-center italic"
         >
           These principles remain constant - regardless of industry.
         </motion.p>
