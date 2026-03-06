@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Vanspire Insights | Enterprise Technology & Digital Strategy',
     description: 'Perspectives on enterprise technology, systems thinking, and digital transformation from the Vanspire team.',
     url: '/insights',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Vanspire Insights' }],
+    images: [{ url: '/ogimage.webp', width: 1200, height: 630, alt: 'Vanspire Insights' }],
   },
   alternates: { canonical: '/insights' },
 }

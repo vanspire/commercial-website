@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Designing Future-Ready Enterprise Technology Strategies | Vanspire',
     description: 'How enterprise leaders design technology programmes that remain relevant as business conditions evolve - and avoid the recurring cost of strategic disalignment.',
     url: '/insights/future-ready-enterprise-technology-strategy',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Future-Ready Enterprise Technology Strategy' }],
+    images: [{ url: '/ogimage.webp', width: 1200, height: 630, alt: 'Future-Ready Enterprise Technology Strategy' }],
     type: 'article',
   },
   alternates: { canonical: '/insights/future-ready-enterprise-technology-strategy' },

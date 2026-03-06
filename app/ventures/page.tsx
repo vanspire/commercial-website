@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       'Vanspire ventures are built with enterprise standards and long-term intent. Technology is active. More verticals coming.',
     url: '/ventures',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Vanspire Ventures' }],
+    images: [{ url: '/ogimage.webp', width: 1200, height: 630, alt: 'Vanspire Ventures' }],
   },
   alternates: { canonical: '/ventures' },
 }

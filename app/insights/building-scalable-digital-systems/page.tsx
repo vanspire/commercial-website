@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Building Scalable Digital Systems for Long-Term Growth | Vanspire',
     description: 'Why most companies build fragile systems - and the architectural principles that separate software built to endure from software built to ship.',
     url: '/insights/building-scalable-digital-systems',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Building Scalable Digital Systems' }],
+    images: [{ url: '/ogimage.webp', width: 1200, height: 630, alt: 'Building Scalable Digital Systems' }],
     type: 'article',
   },
   alternates: { canonical: '/insights/building-scalable-digital-systems' },

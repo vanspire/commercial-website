@@ -6,19 +6,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
   return [
+    // Core pages
     { url: `${siteUrl}/`, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${siteUrl}/about`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${siteUrl}/ventures`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${siteUrl}/ventures/technology`, lastModified, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${siteUrl}/ventures/technology/services/software-web-platforms`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${siteUrl}/ventures/technology/services/application-development`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${siteUrl}/ventures/technology/services/cloud-system-architecture`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${siteUrl}/ventures/technology/services/iot-smart-solutions`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${siteUrl}/ventures/technology/services/digital-transformation`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${siteUrl}/insights`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${siteUrl}/contact`, lastModified, changeFrequency: 'yearly', priority: 0.85 },
+
+    // Services hub
+    { url: `${siteUrl}/services`, lastModified, changeFrequency: 'monthly', priority: 0.95 },
+
+    // Digital Solutions
+    { url: `${siteUrl}/services/digital-solutions/web-platform-development`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${siteUrl}/services/digital-solutions/application-development`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${siteUrl}/services/digital-solutions/cloud-infrastructure`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${siteUrl}/services/digital-solutions/digital-transformation`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+
+    // Integration & Implementation
+    { url: `${siteUrl}/services/integration/erp-implementation`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${siteUrl}/services/integration/hospital-management-system`, lastModified, changeFrequency: 'monthly', priority: 0.92 },
+    { url: `${siteUrl}/services/integration/enterprise-system-integration`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+
+    // Ventures
+    { url: `${siteUrl}/ventures`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${siteUrl}/ventures/technology`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+
+    // Insights
     { url: `${siteUrl}/insights/building-scalable-digital-systems`, lastModified, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${siteUrl}/insights/future-ready-enterprise-technology-strategy`, lastModified, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${siteUrl}/contact`, lastModified, changeFrequency: 'yearly', priority: 0.8 },
+
+    // SEO Landing Pages
+    { url: `${siteUrl}/best-website-development-company-in-kochi`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${siteUrl}/best-digital-marketing-company-in-kerala`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${siteUrl}/best-mobile-app-development-company-in-india`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${siteUrl}/iot-and-software-solutions`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+
+    // Legal
     { url: `${siteUrl}/terms`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${siteUrl}/privacy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
   ]

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       'Enterprise-grade web platforms, custom software engineering, cloud architecture, and IoT solutions. Built for scale, built to last.',
     url: '/ventures/technology',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Vanspire Technology' }],
+    images: [{ url: '/ogimage.webp', width: 1200, height: 630, alt: 'Vanspire Technology' }],
   },
   alternates: { canonical: '/ventures/technology' },
 }

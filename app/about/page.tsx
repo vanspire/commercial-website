@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       'A future-focused brand group built with discipline, vision, and long-term intent. Meet the people and philosophy behind Vanspire.',
     url: '/about',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About Vanspire' }],
+    images: [{ url: '/ogimage.webp', width: 1200, height: 630, alt: 'About Vanspire' }],
   },
   alternates: { canonical: '/about' },
 }
