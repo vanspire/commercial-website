@@ -28,23 +28,29 @@ export const metadata: Metadata = {
 }
 
 const team = [
-  {
-    name: 'Adithyan N Dileep',
-    role: 'Founder & Chief Executive',
-    bio: 'Adithyan founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
+    {
+    name: 'Akshay Krishna',
+    role: 'roleee',
+    bio: 'Akshay founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
   },
   {
-    name: 'Arun Krishnan',
-    role: 'Head of Technology',
-    bio: 'Arun leads the technology vertical - overseeing all engineering operations, system architecture decisions, and client delivery. He brings deep expertise in cloud infrastructure and enterprise platform development.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80',
+    name: 'Vyshnav M',
+    role: 'rolee',
+    bio: 'Vyshnav M founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
   },
   {
-    name: 'Priya Menon',
-    role: 'Strategy & Growth',
-    bio: 'Priya shapes how Vanspire identifies, evaluates, and enters new venture opportunities. She is focused on long-term positioning, market research, and operational frameworks for sustainable expansion.',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80',
+    name: 'Sreehari S',
+    role: 'roleee',
+    bio: 'Sreehari founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    name: 'Adithyan Dileep',
+    role: 'rolee',
+    bio: 'Adithyan founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
   },
 ]
 
@@ -211,7 +217,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      {/* <section className="section-pad bg-brand-offwhite">
+      <section className="section-pad bg-brand-offwhite">
         <div className="container-site">
           <MotionWrapper className="mb-16">
             <SectionLabel>The Team</SectionLabel>
@@ -220,7 +226,7 @@ export default function AboutPage() {
             </h2>
           </MotionWrapper>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid  grid-cols-1 md:grid-cols-4 gap-8 2xl:gap-5">
             {team.map((member, i) => (
               <MotionWrapper key={member.name} delay={i * 0.12}>
                 <div className="group">
@@ -228,7 +234,7 @@ export default function AboutPage() {
                     <img
                       src={member.image}
                       alt={`${member.name} - ${member.role} at Vanspire`}
-                      className="w-full h-[320px] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                      className="w-full aspect-[2/2.5] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                     />
                   </div>
                   <p className="text-label text-brand-muted mb-1">{member.role}</p>
@@ -239,7 +245,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <CTASection />
     </>
