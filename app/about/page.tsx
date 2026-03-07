@@ -120,17 +120,48 @@ export default function AboutPage() {
             </MotionWrapper>
           </div>
 
-          <MotionWrapper delay={0.2} className="mt-16">
+          {/* <MotionWrapper delay={0.2} className="mt-16">
             <img
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80"
               alt="Vanspire vision - long-term enterprise thinking"
               className="w-full h-[320px] md:h-[420px] object-cover"
             />
-          </MotionWrapper>
+          </MotionWrapper> */}
         </div>
       </section>
 
       <div className="divider" />
+
+       {/* Team */}
+      <section id="team" className="section-pad bg-brand-offwhite">
+        <div className="container-site">
+          <MotionWrapper className="mb-16">
+            <SectionLabel>The Team</SectionLabel>
+            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-light tracking-[-0.04em] text-brand-black mt-4 max-w-2xl leading-[1.1]">
+              The People Behind Vanspire
+            </h2>
+          </MotionWrapper>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8 md:gap-8 2xl:gap-5">
+            {team.map((member, i) => (
+              <MotionWrapper key={member.name} delay={i * 0.12}>
+                <div className="group">
+                  <div className="overflow-hidden mb-6">
+                    <img
+                      src={member.image}
+                      alt={`${member.name} - ${member.role} at Vanspire`}
+                      className="w-full aspect-[2/2.5] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <p className="text-label !tracking-[0.05em] text-brand-muted mb-1">{member.role}</p>
+                  <h3 className="text-[20px] font-light tracking-tight text-brand-black mb-3">{member.name}</h3>
+                  <p className="text-[14px] font-light text-brand-muted leading-relaxed">{member.bio}</p>
+                </div>
+              </MotionWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Why Vanspire Exists */}
       <section className="section-pad bg-brand-offwhite">
@@ -220,36 +251,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section id="team" className="section-pad bg-brand-offwhite">
-        <div className="container-site">
-          <MotionWrapper className="mb-16">
-            <SectionLabel>The Team</SectionLabel>
-            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-light tracking-[-0.04em] text-brand-black mt-4 max-w-2xl leading-[1.1]">
-              The People Behind Vanspire
-            </h2>
-          </MotionWrapper>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8 md:gap-8 2xl:gap-5">
-            {team.map((member, i) => (
-              <MotionWrapper key={member.name} delay={i * 0.12}>
-                <div className="group">
-                  <div className="overflow-hidden mb-6">
-                    <img
-                      src={member.image}
-                      alt={`${member.name} - ${member.role} at Vanspire`}
-                      className="w-full aspect-[2/2.5] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <p className="text-label !tracking-[0.05em] text-brand-muted mb-1">{member.role}</p>
-                  <h3 className="text-[20px] font-light tracking-tight text-brand-black mb-3">{member.name}</h3>
-                  <p className="text-[14px] font-light text-brand-muted leading-relaxed">{member.bio}</p>
-                </div>
-              </MotionWrapper>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       <CTASection />
     </>
