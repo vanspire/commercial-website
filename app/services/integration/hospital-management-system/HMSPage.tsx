@@ -72,21 +72,21 @@ function HMSIllustration() {
       <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
         {/* Core platform */}
         <motion.rect x="148" y="120" width="104" height="80" rx="10"
-          stroke="#0a0a0a" strokeWidth="2"
+          stroke="#616161" strokeWidth="2"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={inView ? { pathLength: 1, opacity: 1 } : {}}
           transition={{ duration: 1, ease: 'easeInOut' }}
         />
-        <motion.rect x="148" y="120" width="104" height="80" rx="10" fill="#0a0a0a" fillOpacity="0.05"
+        <motion.rect x="148" y="120" width="104" height="80" rx="10" fill="#616161" fillOpacity="0.05"
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.8 }}
         />
         {/* Cross symbol */}
         <motion.path d="M193 148 L207 148 M200 141 L200 175"
-          stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round"
+          stroke="#616161" strokeWidth="2" strokeLinecap="round"
           initial={{ pathLength: 0 }} animate={inView ? { pathLength: 1 } : {}}
           transition={{ delay: 0.9, duration: 0.5 }}
         />
-        <motion.text x="200" y="208" textAnchor="middle" fill="#0a0a0a" fillOpacity="0.3" fontSize="8" fontFamily="system-ui"
+        <motion.text x="200" y="208" textAnchor="middle" fill="#616161" fillOpacity="1" fontSize="8" fontFamily="system-ui"
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 1 }}>
           HMS CORE
         </motion.text>
@@ -95,7 +95,7 @@ function HMSIllustration() {
         {modulePositions.map((mod, i) => {
           const dx = mod.x - 200
           const dy = mod.y - 160
-          const dist = Math.sqrt(dx * dx + dy * dy)
+          const dist = Math.sqrt(dx * dx + dy * dy) 
           const nx = 200 + (dx / dist) * 52
           const ny = 160 + (dy / dist) * 40
 
@@ -107,19 +107,19 @@ function HMSIllustration() {
             >
               <motion.line
                 x1={nx} y1={ny} x2={mod.x} y2={mod.y}
-                stroke="#0a0a0a" strokeWidth="1" strokeOpacity="0.12" strokeDasharray="4 3"
+                stroke="#616161" strokeWidth="1" strokeOpacity="0.5" strokeDasharray="4 3"
                 initial={{ pathLength: 0 }} animate={inView ? { pathLength: 1 } : {}}
                 transition={{ delay: 1.4 + i * 0.12, duration: 0.3 }}
               />
-              <circle cx={mod.x} cy={mod.y} r="22" stroke="#0a0a0a" strokeWidth="1" strokeOpacity="0.2" fill="white"/>
-              <text x={mod.x} y={mod.y + 4} textAnchor="middle" fill="#0a0a0a" fillOpacity="0.45" fontSize="7.5" fontFamily="system-ui">{mod.label}</text>
+              <circle cx={mod.x} cy={mod.y} r="22" stroke="#616161" strokeWidth="1" strokeOpacity="0.8" fill="white"/>
+              <text x={mod.x} y={mod.y + 4} textAnchor="middle" fill="#616161" fillOpacity="1" fontSize="8" fontFamily="system-ui">{mod.label}</text>
             </motion.g>
           )
         })}
 
         {/* Pulsing ring */}
         <motion.circle cx="200" cy="160" r="60"
-          stroke="#0a0a0a" strokeWidth="0.5" strokeOpacity="0.06"
+          stroke="#616161" strokeWidth="0.5" strokeOpacity="0.3"
           animate={inView ? { r: [60, 70, 60], opacity: [0.06, 0.1, 0.06] } : {}}
           transition={{ repeat: Infinity, duration: 3 }}
         />

@@ -28,29 +28,33 @@ export const metadata: Metadata = {
 }
 
 const team = [
-    {
+  {
     name: 'Akshay Krishna',
-    role: 'roleee',
-    bio: 'Akshay founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+    role: 'Venture Operations',
+    linkedin: 'https://www.linkedin.com/in/akshay-krishna-20764723a/',
+    bio: 'Focusing on structuring delivery systems and operational frameworks that support our growth.',
+    image: '/akshay.png',
   },
   {
     name: 'Vyshnav M',
-    role: 'rolee',
-    bio: 'Vyshnav M founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+    role: 'Growth & Markets',
+    linkedin: 'https://www.linkedin.com/in/vyshnavmancheri/',
+    bio: 'Drives digital growth, market visibility, and strategic positioning across Vanspire initiatives.',
+    image: '/vyshnav.webp',
   },
   {
     name: 'Sreehari S',
-    role: 'roleee',
-    bio: 'Sreehari founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
+    role: 'Systems & Infra',
+    linkedin: 'https://www.linkedin.com/in/sreehari-s-5a2a592b9/',
+    bio: 'Focusing on building scalable systems and core technological foundations for Vanspire ventures.',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
   },
   {
     name: 'Adithyan Dileep',
-    role: 'rolee',
-    bio: 'Adithyan founded Vanspire with a clear thesis: that the most enduring companies are built deliberately, not reactively. He leads group strategy, venture selection, and long-term capital allocation across all Vanspire verticals.',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+    role: 'Product & Innovation',
+    linkedin: 'https://www.linkedin.com/in/adithyan-dileep/',
+    bio: 'Focusing on shaping product direction and turning ideas into impactful digital solutions.',
+    image: '/adithyan.webp',
   },
 ]
 
@@ -217,7 +221,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      {/* <section className="section-pad bg-brand-offwhite">
+      <section id="team" className="section-pad bg-brand-offwhite">
         <div className="container-site">
           <MotionWrapper className="mb-16">
             <SectionLabel>The Team</SectionLabel>
@@ -226,7 +230,7 @@ export default function AboutPage() {
             </h2>
           </MotionWrapper>
 
-          <div className="grid  grid-cols-1 md:grid-cols-4 gap-8 2xl:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8 md:gap-8 2xl:gap-5">
             {team.map((member, i) => (
               <MotionWrapper key={member.name} delay={i * 0.12}>
                 <div className="group">
@@ -237,7 +241,7 @@ export default function AboutPage() {
                       className="w-full aspect-[2/2.5] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                     />
                   </div>
-                  <p className="text-label text-brand-muted mb-1">{member.role}</p>
+                  <p className="text-label !tracking-[0.05em] text-brand-muted mb-1">{member.role}</p>
                   <h3 className="text-[20px] font-light tracking-tight text-brand-black mb-3">{member.name}</h3>
                   <p className="text-[14px] font-light text-brand-muted leading-relaxed">{member.bio}</p>
                 </div>
@@ -245,7 +249,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <CTASection />
     </>
