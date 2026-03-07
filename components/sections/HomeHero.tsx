@@ -69,19 +69,20 @@ export default function HomeHero() {
         </MotionWrapper>
 
         <MotionWrapper delay={0.45} className="flex flex-wrap gap-4">
-          <Link
-            href="/ventures/technology"
-            className="group inline-flex items-center gap-3 h-[54px] px-9 bg-white text-[#060608] text-[14px] font-medium tracking-wide hover:bg-white/90 transition-all duration-300"
-          >
-            Explore Our Work
-            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-          </Link>
-          <Link
+           <Link
             href="/contact"
-            className="inline-flex items-center h-[54px] px-9 border border-white/20 text-white text-[14px] font-light tracking-wide hover:border-white/60 transition-all duration-300"
+            className="inline-flex items-center h-[54px] px-9  text-[14px] font-light tracking-wide bg-white text-[#060608] transition-all hover:bg-white/90 duration-300"
           >
             Plan With Vanspire
           </Link>
+          <Link
+            href="/services"
+            className="group inline-flex items-center border border-white/20 text-white hover:border-white/60 gap-3 h-[54px] px-9  text-[14px] font-medium tracking-wide  transition-all duration-300"
+          >
+            Our Services
+            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+          </Link>
+         
         </MotionWrapper>
       </motion.div>
 
