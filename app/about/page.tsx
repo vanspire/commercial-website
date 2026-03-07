@@ -217,7 +217,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="section-pad bg-brand-offwhite">
+      {/* <section className="section-pad bg-brand-offwhite">
         <div className="container-site">
           <MotionWrapper className="mb-16">
             <SectionLabel>The Team</SectionLabel>
@@ -245,7 +245,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <CTASection />
     </>
