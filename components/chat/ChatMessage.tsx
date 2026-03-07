@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { ReactNode } from 'react'
 
 export interface Message {
   id: string
@@ -13,6 +14,41 @@ export interface Message {
 interface ChatMessageProps {
   message: Message
   index: number
+}
+
+function renderText(text: string): ReactNode[] {
+  // Regex to match [link label](url)
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts: ReactNode[] = []
+  let lastIndex = 0
+  let match
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index))
+    }
+    const label = match[1]
+    const href = match[2]
+    
+    parts.push(
+      <a
+        key={match.index}
+        href={href}
+        target={href.startsWith('http') ? '_blank' : undefined}
+        rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+        className="font-medium underline decoration-white/30 underline-offset-2 hover:decoration-white transition-all duration-200"
+      >
+        {label}
+      </a>
+    )
+    lastIndex = match.index + match[0].length
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex))
+  }
+
+  return parts.length > 0 ? parts : [text]
 }
 
 export default function ChatMessage({ message, index }: ChatMessageProps) {
@@ -32,7 +68,7 @@ export default function ChatMessage({ message, index }: ChatMessageProps) {
             : 'bg-[#1e1e1e] text-[#e5e5e5] border border-[#5e5e5e] rounded-2xl rounded-bl-sm px-4 py-3'
         }`}
       >
-        {/* Message text - render line breaks */}
+        {/* Message text - render line breaks and links */}
         {message.text.split('\n\n').map((para, pIdx) => (
           <p
             key={pIdx}
@@ -40,7 +76,7 @@ export default function ChatMessage({ message, index }: ChatMessageProps) {
               pIdx > 0 ? 'mt-2' : ''
             } ${isUser ? 'text-[#0a0a0a]' : 'text-[#d4d4d4]'}`}
           >
-            {para}
+            {renderText(para)}
           </p>
         ))}
 

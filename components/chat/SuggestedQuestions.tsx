@@ -1,8 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
-const SUGGESTED = [
+const DEFAULT_SUGGESTED = [
   { id: 'q1', label: 'Tell me about Digital Solutions' },
   { id: 'q2', label: 'What is your Hospital Management System?' },
   { id: 'q3', label: 'Do you offer ERP implementation?' },
@@ -12,16 +13,26 @@ const SUGGESTED = [
 
 interface SuggestedQuestionsProps {
   onSelect: (question: string) => void
+  questions?: { id: string; label: string }[]
 }
 
-export default function SuggestedQuestions({ onSelect }: SuggestedQuestionsProps) {
+export default function SuggestedQuestions({ onSelect, questions = DEFAULT_SUGGESTED }: SuggestedQuestionsProps) {
+  // Use state to handle staggered animations consistently on mount
+  const [mounted, setMounted] = useState(false)
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
   return (
     <div className="px-4 pb-4 pt-1">
       <p className="text-[10.5px] uppercase tracking-widest text-[#ffffff]/50 mb-3">
         Suggested questions
       </p>
       <div className="flex flex-col gap-1.5">
-        {SUGGESTED.map((q, i) => (
+        {questions.map((q, i) => (
           <motion.button
             key={q.id}
             initial={{ opacity: 0, x: -8 }}
@@ -37,3 +48,4 @@ export default function SuggestedQuestions({ onSelect }: SuggestedQuestionsProps
     </div>
   )
 }
+

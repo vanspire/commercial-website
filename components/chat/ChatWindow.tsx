@@ -18,6 +18,43 @@ function generateId() {
   return Math.random().toString(36).slice(2, 9)
 }
 
+function generateFollowUpQuestions(lastMessage: string) {
+  const text = lastMessage.toLowerCase()
+  if (text.includes('hms') || text.includes('hospital')) {
+    return [
+      { id: 'f1', label: 'What features does the HMS include?' },
+      { id: 'f2', label: 'How does HMS implementation work?' },
+      { id: 'f3', label: 'Can it integrate with existing systems?' },
+    ]
+  }
+  if (text.includes('erp') || text.includes('sap') || text.includes('odoo')) {
+    return [
+      { id: 'f1', label: 'What ERP systems do you implement?' },
+      { id: 'f2', label: 'How long does ERP deployment take?' },
+      { id: 'f3', label: 'Do you offer ERP support?' },
+    ]
+  }
+  if (text.includes('digital solutions') || text.includes('web')) {
+    return [
+      { id: 'f1', label: 'Do you build custom web platforms?' },
+      { id: 'f2', label: 'What tech stack do you use?' },
+      { id: 'f3', label: 'Do you build mobile apps?' },
+    ]
+  }
+  if (text.includes('cloud') || text.includes('aws')) {
+    return [
+      { id: 'f1', label: 'Do you migrate legacy systems to cloud?' },
+      { id: 'f2', label: 'How do you ensure cloud security?' },
+      { id: 'f3', label: 'Do you offer managed infrastructure?' },
+    ]
+  }
+  return [
+    { id: 'f1', label: 'How much does a project cost?' },
+    { id: 'f2', label: 'How can I contact Vanspire?' },
+    { id: 'f3', label: 'What industries do you work with?' },
+  ]
+}
+
 interface ChatWindowProps {
   onClose: () => void
 }
@@ -40,7 +77,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
     return () => clearTimeout(t)
   }, [])
 
-  function handleSend(text?: string) {
+  async function handleSend(text?: string) {
     const query = (text ?? input).trim()
     if (!query || isTyping) return
 
@@ -55,20 +92,36 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
     setMessages((prev) => [...prev, userMsg])
     setIsTyping(true)
 
-    // Simulate a short "thinking" delay - feels natural, not instant
-    const delay = 800 + Math.random() * 600
-    setTimeout(() => {
-      const result = findBestMatch(query)
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: query }),
+      })
+
+      if (!res.ok) throw new Error('API Request Failed')
+
+      const data = await res.json()
 
       const botMsg: Message = {
         id: generateId(),
         role: 'bot',
-        text: result.entry.detailed,
-        cta: result.entry.cta,
+        text: data.reply,
       }
       setMessages((prev) => [...prev, botMsg])
+    } catch (error) {
+      console.error('Chat Error:', error)
+      const errorMsg: Message = {
+        id: generateId(),
+        role: 'bot',
+        text: 'I encountered an issue connecting to my semantic core. Please check your internet connection and verify that the Groq API key is valid in your `.env.local` file. If the issue persists, feel free to [contact our team](https://vanspire.in/contact).',
+      }
+      setMessages((prev) => [...prev, errorMsg])
+    } finally {
       setIsTyping(false)
-    }, delay)
+    }
   }
 
   function handleKeyDown(e: React.KeyboardEvent) {
@@ -118,32 +171,29 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
       </div>
 
       {/* Body - scrollable */}
-      <div className="flex-1 overflow-y-auto overscroll-contain">
+      <div className="flex-1 flex flex-col overflow-y-auto overscroll-contain px-4 pt-4 pb-2 gap-3">
         {/* Messages */}
-        <div className="px-4 pt-4 pb-2 flex flex-col gap-3">
-          {messages.map((msg, i) => (
-            <ChatMessage key={msg.id} message={msg} index={i} />
-          ))}
+        {messages.map((msg, i) => (
+          <ChatMessage key={msg.id} message={msg} index={i} />
+        ))}
 
-          {/* Typing indicator */}
-          <AnimatePresence>
-            {isTyping && (
-              <motion.div
-                key="typing"
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="flex justify-start"
-              >
-                <div className="bg-[#1e1e1e] border border-[#2a2a2a] rounded-2xl rounded-bl-sm">
-                  <TypingIndicator />
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-          <div ref={bottomRef} />
-        </div>
+        {/* Typing indicator */}
+        <AnimatePresence>
+          {isTyping && (
+            <motion.div
+              key="typing"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="flex justify-start"
+            >
+              <div className="bg-[#1e1e1e] border border-[#2a2a2a] rounded-2xl rounded-bl-sm">
+                <TypingIndicator />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Suggested questions */}
         <AnimatePresence>
@@ -153,11 +203,21 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
+              className="-mx-4"
             >
-              <SuggestedQuestions onSelect={handleSuggestedSelect} />
+              <SuggestedQuestions 
+                onSelect={handleSuggestedSelect} 
+                questions={
+                  messages.length > 1
+                    ? generateFollowUpQuestions(messages[messages.length - 1].text)
+                    : undefined
+                }
+              />
             </motion.div>
           )}
         </AnimatePresence>
+
+        <div ref={bottomRef} className="h-1 flex-shrink-0" />
       </div>
 
       {/* Input bar */}
