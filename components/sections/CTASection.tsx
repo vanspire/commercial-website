@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function CTASection() {
   const ref = useRef(null)
@@ -12,10 +13,11 @@ export default function CTASection() {
     <section ref={ref} className="relative section-pad bg-white overflow-hidden">
       {/* Background image - muted */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80"
           alt=""
-          className="w-full h-full object-cover opacity-[0.04]"
+          fill
+          className="object-cover opacity-[0.04]"
           aria-hidden="true"
         />
       </div>

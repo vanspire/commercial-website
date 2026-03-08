@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 
 const principles = [
   'Long-term thinking',
@@ -37,14 +38,15 @@ export default function ValuesSection() {
           initial={{ opacity: 0, scale: 1.02 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative mb-8 md:mb-20 overflow-hidden"
+          className="relative mb-8 md:mb-20 overflow-hidden w-full h-[300px] md:h-[420px]"
         >
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80"
             alt="Team working with shared principles"
-            className="w-full h-[300px] md:h-[420px] object-cover opacity-50"
+            fill
+            className="object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#060608] via-transparent to-[#060608]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#060608] via-transparent to-[#060608] z-[1]" />
         </motion.div>
 
         {/* Principles list - full-width horizontal on desktop */}

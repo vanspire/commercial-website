@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import MotionWrapper from '@/components/ui/MotionWrapper'
 import SectionLabel from '@/components/ui/SectionLabel'
 
@@ -77,14 +78,15 @@ export default function TechnologyPage() {
     <>
       {/* Hero */}
       <section className="pt-40 pb-24 md:pt-52 md:pb-32 bg-[#060608] relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img
+        <div className="absolute inset-0 z-0">
+          <Image
             src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80"
-            alt=""
-            className="w-full h-full object-cover opacity-10"
+            alt="Technology Background"
+            fill
+            className="object-cover opacity-10"
             aria-hidden="true"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent z-[1]" />
         </div>
         <div className="container-site relative z-10">
           <MotionWrapper>
@@ -132,11 +134,12 @@ export default function TechnologyPage() {
             {services.map((svc, i) => (
               <MotionWrapper key={svc.id} delay={i * 0.08}>
                 <Link href={svc.href} className="group block border border-brand-border hover:border-brand-black transition-all duration-300">
-                  <div className="overflow-hidden">
-                    <img
+                  <div className="overflow-hidden relative w-full h-[180px]">
+                    <Image
                       src={svc.image}
                       alt={svc.title}
-                      className="w-full h-[180px] object-cover group-hover:scale-105 transition-transform duration-700"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                   <div className="p-8">

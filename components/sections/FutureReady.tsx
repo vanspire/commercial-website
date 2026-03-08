@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 
 export default function FutureReady() {
   const ref = useRef(null)
@@ -17,15 +18,16 @@ export default function FutureReady() {
             initial={{ opacity: 0, x: -40, scale: 0.96 }}
             animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="relative order-2 lg:order-1"
+            className="relative order-2 lg:order-1 h-[380px] md:h-[480px]"
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
               alt="Designed for expansion - modern architecture symbolizing growth"
-              className="w-full h-[380px] md:h-[480px] object-cover"
+              fill
+              className="object-cover"
             />
             {/* Corner accent */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-brand-black/10" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-brand-black/10 z-[1]" />
           </motion.div>
 
           {/* Right - content */}

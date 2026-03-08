@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 
 const alignments = [
   {
@@ -57,10 +58,10 @@ export default function Philosophy() {
               className="space-y-4"
             >
               <p className="text-[15px] font-light text-brand-muted leading-[1.85]">
-                We don&apos;t chase trends. We study timing, capability, and long-term value.
+                We don&apos;t chase fleeting technological trends. As a top digital marketing and software development company, our focus is entirely on engineering sustainable architectures. By studying timing, core capability pipelines, and long-term enterprise value, we ensure our clients receive the best website solutions that stand the test of time.
               </p>
               <p className="text-[15px] font-light text-brand-muted leading-[1.85]">
-                Vanspire ventures are created only when three things align:
+                Vanspire ventures and client platforms are created only when these three critical factors align:
               </p>
             </motion.div>
 
@@ -68,12 +69,13 @@ export default function Philosophy() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-10"
+              className="mt-10 relative w-full h-[220px]"
             >
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80"
                 alt="Strategic thinking"
-                className="w-full h-[220px] object-cover"
+                fill
+                className="object-cover"
               />
             </motion.div>
           </div>

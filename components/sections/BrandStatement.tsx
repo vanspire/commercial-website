@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 
 export default function BrandStatement() {
   const ref = useRef(null)
@@ -37,14 +38,13 @@ export default function BrandStatement() {
               className="space-y-5"
             >
               <p className="text-[16px] md:text-[17px] font-light text-brand-muted leading-[1.8]">
-                Vanspire is designed as a long-term brand platform - not a single-service company.
-                We build focused ventures that solve real problems today, while laying the groundwork
-                for expansion into new industries tomorrow.
+                Vanspire is engineered as a future-facing enterprise brand platform. Rather than settling as a single-service IT provider, we launch focused technological ventures that resolve critical industry bottlenecks today, while laying the technical and operational groundwork for massive multi-sector expansion tomorrow.
               </p>
               <div className="space-y-3 pt-4 border-t border-brand-border">
                 {[
-                  'Every step we take is intentional.',
-                  'Every venture is built to scale.',
+                  'Every digital transformation sequence is intentional.',
+                  'Every enterprise application is built to scale globally.',
+                  'Every client relationship drives long-term market dominance.'
                 ].map((line, i) => (
                   <motion.div
                     key={line}
@@ -67,12 +67,13 @@ export default function BrandStatement() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-20 overflow-hidden"
+          className="mt-20 overflow-hidden relative w-full h-[280px] md:h-[380px]"
         >
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80"
             alt="Vanspire - Modern workspace and vision"
-            className="w-full h-[280px] md:h-[380px] object-cover"
+            fill
+            className="object-cover"
           />
         </motion.div>
       </div>

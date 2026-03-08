@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import MotionWrapper from '@/components/ui/MotionWrapper'
 import SectionLabel from '@/components/ui/SectionLabel'
 
@@ -85,11 +86,12 @@ export default function InsightsPage() {
             {articles.map((article, i) => (
               <MotionWrapper key={article.slug} delay={i * 0.1}>
                 <Link href={article.slug} className="group block">
-                  <div className="overflow-hidden mb-7">
-                    <img
+                  <div className="overflow-hidden mb-7 relative w-full h-[280px]">
+                    <Image
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-[280px] object-cover group-hover:scale-105 transition-transform duration-700"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                   <div className="flex items-center gap-4 mb-4">

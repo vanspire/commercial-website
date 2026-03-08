@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function CurrentFocus() {
   const ref = useRef(null)
@@ -40,12 +41,13 @@ export default function CurrentFocus() {
               className="space-y-4 mb-10"
             >
               <p className="text-[16px] font-light text-white/60 leading-[1.8]">
-                Technology is where the Vanspire journey begins. Through our technology venture,
-                we design and build software, platforms, and digital systems that help businesses
-                operate, grow, and adapt in a rapidly changing world.
+                Recognized as the best website development company in Kerala and a top software solutions provider in India, Vanspire engineers enterprise-grade digital systems. We design, deploy, and scale robust web platforms, custom mobile applications, secure cloud infrastructure, and advanced IoT integrations that help organizations operate smarter and grow exponentially.
+              </p>
+              <p className="text-[16px] font-light text-white/60 leading-[1.8]">
+                Beyond software engineering, our integrated digital marketing and strategic growth teams ensure that your technological investments yield measurable market dominance and brand visibility.
               </p>
               <p className="text-[14px] font-light text-white/30 italic">
-                This vertical represents our present capabilities - not the limits of our ambition.
+                From conceptual digital transformation consulting to full-stack execution, technology forms the core of our enterprise operations.
               </p>
             </motion.div>
 
@@ -71,12 +73,13 @@ export default function CurrentFocus() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative h-[420px] lg:h-[520px] overflow-hidden"
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
               alt="Technology and digital systems"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/80 via-transparent to-transparent z-[1]" />
 
             {/* Floating stats */}
             <motion.div

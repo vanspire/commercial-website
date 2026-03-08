@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 
 const capabilities = [
   {
@@ -55,11 +56,13 @@ export default function Capabilities() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15 }}
+            className="relative w-full h-[200px]"
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80"
               alt="Technology capabilities"
-              className="w-full h-[200px] object-cover"
+              fill
+              className="object-cover"
             />
           </motion.div>
         </div>

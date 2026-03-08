@@ -4,9 +4,10 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ChatBot from "@/components/chat/ChatBot";
+import GoogleAnalytics from "@/components/Analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Vanspire is the best software solutions, website development, mobile apps, and digital marketing company in India and Kerala. We specialize in IoT solutions, cloud infrastructure, and enterprise software.",
+    "Vanspire is the best software solutions, website development, mobile apps, and digital marketing company in India and Kerala.",
 
   keywords: [
     "best software solutions",
@@ -43,6 +44,15 @@ export const metadata: Metadata = {
     "enterprise software",
     "scalable cloud systems",
   ],
+
+  authors: [{ name: "Vanspire Innovations", url: SITE_URL }],
+  creator: "Vanspire Innovations",
+  publisher: "Vanspire Innovations",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 
   openGraph: {
     title: "Vanspire Innovations | Best Software & Web Development Company",
@@ -68,6 +78,7 @@ export const metadata: Metadata = {
     description:
       "Vanspire offers the best software solutions, website development, mobile apps, IoT, and digital marketing in India and Kerala.",
     images: ["/ogimage.webp"],
+    creator: "@vanspirein", // Assuming twitter handle
   },
 
   robots: {
@@ -83,8 +94,9 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "/favicon.ico?v=2",
+    shortcut: "/favicon.ico?v=2",
+    apple: "/apple-touch-icon.png",
   },
 
   alternates: {
@@ -92,7 +104,7 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data - Organization + Website schema
+// JSON-LD Structured Data - Organization + Website schema + LocalBusiness
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -101,6 +113,14 @@ const jsonLd = {
       "@id": `${SITE_URL}/#organization`,
       name: "Vanspire Innovations",
       url: SITE_URL,
+      logo: `${SITE_URL}/blacklogo.svg`,
+      sameAs: [
+        "https://www.linkedin.com/company/vanspire-innovations/",
+        "https://www.instagram.com/vanspire.in/",
+        "https://twitter.com/vanspirein",
+        "https://www.youtube.com/@vanspire",
+        "https://www.facebook.com/vanspire"
+      ],
       description:
         "Vanspire Innovations is the best software solutions, website development, mobile apps, and digital marketing company in India and Kerala, specializing in IoT and cloud infrastructure.",
       foundingDate: "2024",
@@ -112,7 +132,8 @@ const jsonLd = {
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
-        email: "hello@vanspire.in",
+        email: "hello@vanspire.in", // This is fine in JSON-LD, spiders render text.
+        availableLanguage: ["English", "Malayalam", "Hindi"]
       },
     },
     {
@@ -124,6 +145,19 @@ const jsonLd = {
         "@id": `${SITE_URL}/#organization`,
       },
     },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
+      name: "Vanspire Innovations",
+      image: `${SITE_URL}/ogimage.webp`,
+      url: SITE_URL,
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "IN",
+        addressRegion: "Kerala"
+      },
+      priceRange: "$$"
+    }
   ],
 };
 
@@ -147,7 +181,8 @@ export default function RootLayout({
         </LayoutWrapper>
         <Footer />
         <ChatBot />
-        <Analytics />
+        <GoogleAnalytics />
+        <VercelAnalytics />
         <SpeedInsights />
       </body>
     </html>

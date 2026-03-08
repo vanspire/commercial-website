@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import MotionWrapper from '@/components/ui/MotionWrapper'
 import SectionLabel from '@/components/ui/SectionLabel'
 
@@ -130,11 +131,14 @@ export default function ApplicationDevelopmentPage() {
 
             <div className="lg:col-span-5">
               <MotionWrapper delay={0.15}>
-                <img
-                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80"
-                  alt="Application development"
-                  className="w-full h-[320px] object-cover mb-8"
-                />
+                <div className="relative w-full h-[320px] mb-8">
+                  <Image
+                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80"
+                    alt="Application development"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div className="bg-brand-offwhite p-8">
                   <p className="text-label text-brand-muted mb-4">Related Services</p>
                   <div className="space-y-3">

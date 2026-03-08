@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -55,9 +56,11 @@ export default function Header() {
       <div className="container-site flex items-center justify-between h-[75px] md:h-[85px]">
         {/* Logo */}
         <Link href="/" aria-label="Vanspire home" className="flex items-center">
-          <img
+          <Image
             src={logoSrc}
             alt="Vanspire"
+            width={160}
+            height={32}
             className="h-8 w-auto transition-all duration-300"
           />
         </Link>
@@ -120,7 +123,7 @@ export default function Header() {
           }`}
         >
           <div className="flex items-center justify-between px-6 h-[75px] border-b border-brand-border">
-            <img src="/blacklogo.svg" alt="Vanspire" className="h-8 w-auto" />
+            <Image src="/blacklogo.svg" alt="Vanspire" width={160} height={32} className="h-8 w-auto" />
             <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
               <X size={20} className="text-brand-black" />
             </button>

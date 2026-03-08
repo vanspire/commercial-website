@@ -182,18 +182,17 @@ export default function ServicesHubPage() {
 
         <div className="container-site relative z-10">
           <FadeInView>
-            <p className="text-label text-brand-muted mb-5">Technology Services</p>
+            <p className="text-label text-brand-muted mb-5">Enterprise Technology Services</p>
           </FadeInView>
           <FadeInView delay={0.1}>
             <h1 className="text-[clamp(2.4rem,5.5vw,5rem)] font-light tracking-[-0.04em] text-brand-black leading-[1.05] mb-6 max-w-4xl">
-              Systems That Think in<br />
+              Engineering Systems Built for<br />
               <em className="not-italic text-brand-muted">Decades, Not Quarters</em>
             </h1>
           </FadeInView>
           <FadeInView delay={0.2}>
             <p className="text-[17px] font-light text-brand-muted leading-[1.8] max-w-2xl mb-10">
-              We build and integrate enterprise-grade technology systems designed for long-term operational depth.
-              From digital platforms to complex systems integration - our work is structured, deliberate, and built to scale.
+              Vanspire engineers and integrates enterprise-grade technology systems designed for uncompromising long-term operational depth. As a leading software solutions and web development company, our work spans from architecting dynamic digital platforms to executing complex enterprise system integrations. Every solution we deliver is structured, highly secure, deliberately engineered, and built to scale globally.
             </p>
           </FadeInView>
           <FadeInView delay={0.3}>
@@ -284,9 +283,9 @@ export default function ServicesHubPage() {
         <div className="container-site">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
-              { num: '01', heading: 'Systems Thinking', body: 'Every engagement is approached as an interconnected system, not a collection of isolated deliverables.' },
-              { num: '02', heading: 'Enterprise Rigour', body: 'Our processes, documentation, and delivery standards meet the expectations of complex organisations.' },
-              { num: '03', heading: 'Long-horizon Design', body: 'We build for what comes next - platforms designed to grow, adapt, and remain relevant over time.' },
+              { num: '01', heading: 'Systems Thinking', body: 'We approach every software engineering engagement as an interconnected enterprise ecosystem, never as a collection of isolated deliverables. Your new platform connects flawlessly to your existing operations.' },
+              { num: '02', heading: 'Enterprise Rigour', body: 'Our rigorous QA processes, exhaustive architectural documentation, and military-grade security standards consistently meet and exceed the expectations of massive multinational organizations.' },
+              { num: '03', heading: 'Long-horizon Design', body: 'We build exclusively for what comes next. By leveraging serverless infrastructure and highly modular codebases, we ensure your platforms are designed to adapt, perform, and dominate over time.' },
             ].map((item, i) => (
               <FadeInView key={item.num} delay={i * 0.12}>
                 <p className="text-[11px] uppercase tracking-widest text-brand-muted mb-3">{item.num}</p>

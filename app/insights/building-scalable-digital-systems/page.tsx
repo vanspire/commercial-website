@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import MotionWrapper from '@/components/ui/MotionWrapper'
 
 export const metadata: Metadata = {
@@ -56,11 +57,12 @@ export default function InsightArticle1() {
             </p>
           </MotionWrapper>
         </div>
-        <MotionWrapper delay={0.3} className="w-full">
-          <img
+        <MotionWrapper delay={0.3} className="w-full relative h-[420px] md:h-[540px]">
+          <Image
             src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80"
             alt="Enterprise digital systems architecture"
-            className="w-full h-[420px] md:h-[540px] object-cover"
+            fill
+            className="object-cover"
           />
         </MotionWrapper>
       </section>

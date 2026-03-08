@@ -65,8 +65,29 @@ const growthStages = [
 ]
 
 export default function AboutPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Vanspire | Vision, Philosophy & The Team Behind the Brand",
+    "description": "Vanspire is a future-focused brand group built to last. Learn about our founding vision, long-term philosophy, structured growth model, and the team driving Vanspire forward.",
+    "url": "https://vanspire.in/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Vanspire Innovations",
+      "founder": team.map(t => ({
+        "@type": "Person",
+        "name": t.name,
+        "jobTitle": t.role
+      }))
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="pt-40 pb-24 md:pt-52 md:pb-32 bg-white">
         <div className="container-site">
@@ -108,14 +129,13 @@ export default function AboutPage() {
                 technology-driven enterprises that stand the test of time.&rdquo;
               </blockquote>
               <p className="text-[16px] font-light text-brand-muted leading-[1.85] mb-5">
-                Vanspire was founded on a single thesis: the infrastructure of business is
-                increasingly digital, and the companies that own that infrastructure - not
-                just use it - will define the next era of industry.
+                Vanspire was founded on a single core thesis: the fundamental infrastructure of every major global business is increasingly digital. Organizations that intimately own and scale their digital infrastructure—rather than merely renting off-the-shelf software—will aggressively outperform their competitors and define the next era of their respective industries.
+              </p>
+              <p className="text-[16px] font-light text-brand-muted leading-[1.85] mb-5">
+                We launched our technology venture first because it serves as the ultimate leverage point. By dominating software solutions, enterprise web development, and digital marketing integrations in India, we establish a robust technical chassis. Every subsequent venture we build or partner with operates on this ironclad foundation—ensuring that we never go to market with inferior systems.
               </p>
               <p className="text-[16px] font-light text-brand-muted leading-[1.85]">
-                We started with Technology because it is the most leveraged first move.
-                Every subsequent venture will be chosen not for speed-to-market, but for
-                long-term systemic relevance.
+                Our expansions into sectors like manufacturing, FinTech, and healthcare are driven by deep capability, not just speed-to-market. When Vanspire enters a space, we do so with unparalleled systemic relevance and absolute structural integrity.
               </p>
             </MotionWrapper>
           </div>
@@ -146,11 +166,12 @@ export default function AboutPage() {
             {team.map((member, i) => (
               <MotionWrapper key={member.name} delay={i * 0.12}>
                 <div className="group">
-                  <div className="overflow-hidden mb-6">
-                    <img
+                  <div className="overflow-hidden mb-6 relative w-full aspect-[2/2.5]">
+                    <Image
                       src={member.image}
                       alt={`${member.name} - ${member.role} at Vanspire`}
-                      className="w-full aspect-[2/2.5] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                     />
                   </div>
                   <p className="text-label !tracking-[0.05em] text-brand-muted mb-1">{member.role}</p>
@@ -177,19 +198,19 @@ export default function AboutPage() {
             {[
               {
                 title: 'Discipline over velocity',
-                body: 'We do not sprint to the next opportunity. Every venture within Vanspire is fully operational before the next begins. This is how we ensure quality compounds, not technical debt.',
+                body: 'We do not sprint to the next opportunistic gap in the market. Every venture within the Vanspire group is engineered to be fully operational and stress-tested before the next division begins. This rigorous discipline is exactly how we ensure software quality compounds exponentially, avoiding the technical debt that cripples rapidly scaled startups.',
               },
               {
-                title: 'Technology as infrastructure',
-                body: 'Technology is not one of our services - it is the backbone of everything we build. Our first vertical treats software, cloud, and systems as fundamental enterprise infrastructure.',
+                title: 'Technology as structural infrastructure',
+                body: 'Technology is never viewed as an extraneous service—it is the central nervous system of everything we build. Our first active vertical treats custom software development, cloud computing architectures, data ecosystems, and cybersecurity systems as the fundamental infrastructure required for an enterprise to endure generational shifts.',
               },
               {
-                title: 'Enterprise-grade by default',
-                body: 'We build to institutional standards from day one. Whether working with a startup or a large corporation, our output is production-grade, documented, and built to last.',
+                title: 'Enterprise-grade by absolute default',
+                body: 'We build to institutional, Forture 500 standards from day zero. Whether we are architecting an MVP for an ambitious startup or overhauling legacy systems for a large corporation, our output is inherently production-grade, meticulously documented, maximally secure, and definitively built to last.',
               },
               {
-                title: 'Compounding group value',
-                body: 'Each venture shares resources, reputation, and principles with the group. As Vanspire expands, every addition strengthens the whole - not just its individual parts.',
+                title: 'Compounding group value & IP',
+                body: 'Each distinct venture within our ecosystem shares intellectual property, cloud resources, market reputation, and engineering principles with the broader group. As Vanspire expands into new verticals like healthcare or FinTech, every technological addition fundamentally strengthens the core capability of the whole—creating a deeply defensible moat against competitors.',
               },
             ].map((v, i) => (
               <MotionWrapper key={v.title} delay={i * 0.08}>

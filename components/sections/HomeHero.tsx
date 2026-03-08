@@ -18,10 +18,12 @@ export default function HomeHero() {
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2070&q=80"
-          alt=""
-          className="w-full h-full object-cover opacity-30"
+          alt="Vanspire Future-Focused Digital Agency Background"
+          fill
+          priority
+          className="object-cover opacity-30"
           aria-hidden="true"
         />
       </motion.div>
@@ -55,16 +57,15 @@ export default function HomeHero() {
 
         <MotionWrapper delay={0.2}>
           <h1 className="text-[clamp(2.8rem,7vw,5.8rem)] font-light tracking-[-0.04em] text-white leading-[1.02] mb-6 max-w-[65rem]">
-            Building the Foundations<br />
-            <em className="not-italic text-white/50">for Tomorrow's</em><br />
-            Industries
+            Best Software &amp; Web Development<br />
+            <em className="not-italic text-white/50">Company in</em><br />
+            India &amp; Kerala
           </h1>
         </MotionWrapper>
 
         <MotionWrapper delay={0.35}>
           <p className="text-[clamp(1rem,1.6vw,1rem)] font-light text-white/50 max-w-2xl mb-10 leading-relaxed">
-            Vanspire is a future-focused brand group creating scalable systems, solutions,
-            and ventures - starting with technology and expanding with purpose.
+            Vanspire is a future-focused digital agency and technology group. We engineer highly scalable software solutions, high-performance web platforms, custom mobile applications, and enterprise cloud infrastructure for forward-thinking businesses. Drive your digital transformation with India&apos;s leading technology experts.
           </p>
         </MotionWrapper>
 

@@ -12,19 +12,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/insights`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${siteUrl}/contact`, lastModified, changeFrequency: 'yearly', priority: 0.85 },
 
-    // Services hub
+    // Services
     { url: `${siteUrl}/services`, lastModified, changeFrequency: 'monthly', priority: 0.95 },
 
-    // Digital Solutions
-    { url: `${siteUrl}/services/digital-solutions/web-platform-development`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
-    { url: `${siteUrl}/services/digital-solutions/application-development`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
-    { url: `${siteUrl}/services/digital-solutions/cloud-infrastructure`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
-    { url: `${siteUrl}/services/digital-solutions/digital-transformation`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
-
-    // Integration & Implementation
-    { url: `${siteUrl}/services/integration/erp-implementation`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
-    { url: `${siteUrl}/services/integration/hospital-management-system`, lastModified, changeFrequency: 'monthly', priority: 0.92 },
-    { url: `${siteUrl}/services/integration/enterprise-system-integration`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    // Technology Services
+    { url: `${siteUrl}/ventures/technology/services/software-web-platforms`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${siteUrl}/ventures/technology/services/application-development`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${siteUrl}/ventures/technology/services/cloud-system-architecture`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${siteUrl}/ventures/technology/services/iot-smart-solutions`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
+    { url: `${siteUrl}/ventures/technology/services/digital-transformation`, lastModified, changeFrequency: 'monthly', priority: 0.88 },
 
     // Ventures
     { url: `${siteUrl}/ventures`, lastModified, changeFrequency: 'monthly', priority: 0.7 },

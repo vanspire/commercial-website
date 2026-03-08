@@ -25,5 +25,21 @@ export const metadata: Metadata = {
 }
 
 export default function ServicesPage() {
-  return <ServicesHubPage />
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage", // Hub page representing multiple services
+    "name": "Enterprise Technology Services – Digital Solutions & Systems Integration | Vanspire",
+    "description": "Vanspire delivers enterprise-grade digital solutions and systems integration. From web platform development and cloud infrastructure to ERP implementation and Hospital Management Systems.",
+    "url": `${SITE_URL}/services`
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ServicesHubPage />
+    </>
+  )
 }

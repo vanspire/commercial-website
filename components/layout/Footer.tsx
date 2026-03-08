@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Mail } from 'lucide-react'
 
 const footerLinks = {
@@ -12,11 +13,11 @@ const footerLinks = {
     { name: 'Contact', href: '/contact' },
   ],
   services: [
-    { name: 'Digital Solutions', href: '/services' },
-    { name: 'Integration & Implementation', href: '/services' },
-    { name: 'ERP Implementation', href: '/services/integration/erp-implementation' },
-    { name: 'Hospital Management System', href: '/services/integration/hospital-management-system' },
-    { name: 'Enterprise System Integration', href: '/services/integration/enterprise-system-integration' },
+    { name: 'Software Platforms', href: '/ventures/technology/services/software-web-platforms' },
+    { name: 'Application Development', href: '/ventures/technology/services/application-development' },
+    { name: 'Cloud Architecture', href: '/ventures/technology/services/cloud-system-architecture' },
+    { name: 'IoT Solutions', href: '/ventures/technology/services/iot-smart-solutions' },
+    { name: 'Digital Transformation', href: '/ventures/technology/services/digital-transformation' },
   ],
   legal: [
     { name: 'Terms & Conditions', href: '/terms' },
@@ -50,7 +51,7 @@ export default function Footer() {
           {/* Left: Brand block */}
           <div>
             <Link href="/" className="inline-block mb-8">
-              <img src="/whitelogo.svg" alt="Vanspire" className="h-8 w-auto" />
+              <Image src="/whitelogo.svg" alt="Vanspire" width={160} height={32} className="h-8 w-auto" />
             </Link>
             <p className="text-white/50 font-light text-[15px] leading-relaxed max-w-sm mb-8">
               A future-focused brand group building technology-driven ventures.
@@ -64,12 +65,12 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/40 text-[14px] font-light">
                 <Mail size={14} className="flex-shrink-0" />
-                <a
-                  href="mailto:hello@vanspire.in"
+                <Link
+                  href="/contact"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  hello@vanspire.in
-                </a>
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
