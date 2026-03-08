@@ -129,10 +129,10 @@ export default function AboutPage() {
                 technology-driven enterprises that stand the test of time.&rdquo;
               </blockquote>
               <p className="text-[16px] font-light text-brand-muted leading-[1.85] mb-5">
-                Vanspire was founded on a single core thesis: the fundamental infrastructure of every major global business is increasingly digital. Organizations that intimately own and scale their digital infrastructure—rather than merely renting off-the-shelf software—will aggressively outperform their competitors and define the next era of their respective industries.
+                Vanspire was founded on a single core thesis: the fundamental infrastructure of every major global business is increasingly digital. Organizations that intimately own and scale their digital infrastructure - rather than merely renting off-the-shelf software - will aggressively outperform their competitors and define the next era of their respective industries.
               </p>
               <p className="text-[16px] font-light text-brand-muted leading-[1.85] mb-5">
-                We launched our technology venture first because it serves as the ultimate leverage point. By dominating software solutions, enterprise web development, and digital marketing integrations in India, we establish a robust technical chassis. Every subsequent venture we build or partner with operates on this ironclad foundation—ensuring that we never go to market with inferior systems.
+                We launched our technology venture first because it serves as the ultimate leverage point. By dominating software solutions, enterprise web development, and digital marketing integrations in India, we establish a robust technical chassis. Every subsequent venture we build or partner with operates on this ironclad foundation - ensuring that we never go to market with inferior systems.
               </p>
               <p className="text-[16px] font-light text-brand-muted leading-[1.85]">
                 Our expansions into sectors like manufacturing, FinTech, and healthcare are driven by deep capability, not just speed-to-market. When Vanspire enters a space, we do so with unparalleled systemic relevance and absolute structural integrity.
@@ -202,7 +202,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Technology as structural infrastructure',
-                body: 'Technology is never viewed as an extraneous service—it is the central nervous system of everything we build. Our first active vertical treats custom software development, cloud computing architectures, data ecosystems, and cybersecurity systems as the fundamental infrastructure required for an enterprise to endure generational shifts.',
+                body: 'Technology is never viewed as an extraneous service - it is the central nervous system of everything we build. Our first active vertical treats custom software development, cloud computing architectures, data ecosystems, and cybersecurity systems as the fundamental infrastructure required for an enterprise to endure generational shifts.',
               },
               {
                 title: 'Enterprise-grade by absolute default',
@@ -210,7 +210,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Compounding group value & IP',
-                body: 'Each distinct venture within our ecosystem shares intellectual property, cloud resources, market reputation, and engineering principles with the broader group. As Vanspire expands into new verticals like healthcare or FinTech, every technological addition fundamentally strengthens the core capability of the whole—creating a deeply defensible moat against competitors.',
+                body: 'Each distinct venture within our ecosystem shares intellectual property, cloud resources, market reputation, and engineering principles with the broader group. As Vanspire expands into new verticals like healthcare or FinTech, every technological addition fundamentally strengthens the core capability of the whole - creating a deeply defensible moat against competitors.',
               },
             ].map((v, i) => (
               <MotionWrapper key={v.title} delay={i * 0.08}>

@@ -2,7 +2,7 @@ export const AI_CONTEXT = {
   company: `
 Vanspire is a technology company focused on building scalable digital systems and enterprise software solutions.
 Based in Kerala, India, we work with clients internationally.
-Every engagement is scoped individually—we do not offer off-the-shelf retainers or publish standard pricing.
+Every engagement is scoped individually - we do not offer off-the-shelf retainers or publish standard pricing.
 Pages:
 - Main Company Page: https://vanspire.in/
 - About Us: https://vanspire.in/about
@@ -41,6 +41,6 @@ Vanspire is structured as a brand group, where our technology arm funds and info
   philosophy: `
 Vanspire focuses on long-term scalable systems rather than short-term software projects.
 Solutions emphasize operational clarity, automation, and sustainable digital infrastructure.
-We follow a discipline over velocity approach—quality is non-negotiable. Software is treated as a long-term asset, built to enterprise-grade standards.
+We follow a discipline over velocity approach - quality is non-negotiable. Software is treated as a long-term asset, built to enterprise-grade standards.
 `
 }

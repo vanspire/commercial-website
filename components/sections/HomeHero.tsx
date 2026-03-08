@@ -13,7 +13,7 @@ export default function HomeHero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
 
   return (
-    <section ref={ref} className="relative w-full h-screen min-h-[700px] overflow-hidden bg-[#060608]">
+    <section ref={ref} className="relative w-full h-screen min-h-[680px] overflow-hidden bg-[#060608]">
       {/* Parallax background image */}
       <motion.div
         style={{ y }}
@@ -46,46 +46,45 @@ export default function HomeHero() {
       />
 
       {/* Content */}
-      <motion.div style={{ opacity }} className="relative z-10 h-full flex flex-col justify-center container-site">
-        <MotionWrapper delay={0.1}>
-          <div className="inline-flex items-center gap-3 ml-2 mb-5">
-            <div className="w-8 h-px bg-white/40" />
-            <span className="text-[11px] uppercase tracking-[0.25em] text-white/40 font-light">
-              Vanspire - A Brand Group
-            </span>
-          </div>
-        </MotionWrapper>
-
-        <MotionWrapper delay={0.2}>
-          <h1 className="text-[clamp(2.8rem,7vw,5.8rem)] font-light tracking-[-0.04em] text-white leading-[1.02] mb-6 max-w-[65rem]">
-            Best Software &amp; Web Development<br />
-            <em className="not-italic text-white/50">Company in</em><br />
-            India &amp; Kerala
-          </h1>
-        </MotionWrapper>
-
-        <MotionWrapper delay={0.35}>
-          <p className="text-[clamp(1rem,1.6vw,1rem)] font-light text-white/50 max-w-2xl mb-10 leading-relaxed">
-            Vanspire is a future-focused digital agency and technology group. We engineer highly scalable software solutions, high-performance web platforms, custom mobile applications, and enterprise cloud infrastructure for forward-thinking businesses. Drive your digital transformation with India&apos;s leading technology experts.
-          </p>
-        </MotionWrapper>
-
-        <MotionWrapper delay={0.45} className="flex flex-wrap gap-4">
-           <Link
-            href="/contact"
-            className="inline-flex items-center h-[54px] px-9  text-[14px] font-light tracking-wide bg-white text-[#060608] transition-all hover:bg-white/90 duration-300"
-          >
-            Plan With Vanspire
-          </Link>
-          <Link
-            href="/services"
-            className="group inline-flex items-center border border-white/20 text-white hover:border-white/60 gap-3 h-[54px] px-9  text-[14px] font-medium tracking-wide  transition-all duration-300"
-          >
-            Our Services
-            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-          </Link>
-         
-        </MotionWrapper>
+      <motion.div style={{ opacity }} className="relative z-10 h-full pb-10 md:pb-16 container-site">
+        <div className="h-full flex flex-col justify-end">
+          <MotionWrapper delay={0.1}>
+            <div className="inline-flex items-center gap-3 ml-2 mb-5">
+              <div className="w-8 h-px bg-white/40" />
+              <span className="text-[11px] uppercase tracking-[0.25em] text-white/40 font-light">
+                Vanspire - A Brand Group
+              </span>
+            </div>
+          </MotionWrapper>
+          <MotionWrapper delay={0.2}>
+            <h1 className="text-[clamp(2.8rem,6.2vw,5.5rem)] font-light tracking-[-0.04em] text-white leading-[1.02] mb-6 max-w-[65rem]">
+              Best Software &amp; Web Development<br />
+              <em className="not-italic text-white/50">Company in </em>
+              India &amp; Kerala
+            </h1>
+          </MotionWrapper>
+          <MotionWrapper className='hidden lg:block' delay={0.35}>
+            <p className="text-[clamp(1rem,1.6vw,0.5rem)] font-light text-white/50 max-w-4xl mb-10 leading-relaxed">
+              Vanspire is a future-focused digital agency and technology group. We engineer highly scalable software solutions, high-performance web platforms, custom mobile applications, and enterprise cloud infrastructure for forward-thinking businesses. Drive your digital transformation with India&apos;s leading technology experts.
+            </p>
+          </MotionWrapper>
+          <MotionWrapper delay={0.45} className="flex flex-wrap gap-4">
+             <Link
+              href="/contact"
+              className="inline-flex items-center h-[54px] px-9  text-[14px] font-light tracking-wide bg-white text-[#060608] transition-all hover:bg-white/90 duration-300"
+            >
+              Plan With Vanspire
+            </Link>
+            <Link
+              href="/services"
+              className="group inline-flex items-center border border-white/20 text-white hover:border-white/60 gap-3 h-[54px] px-9  text-[14px] font-medium tracking-wide  transition-all duration-300"
+            >
+              Our Services
+              <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </Link>
+          
+          </MotionWrapper>
+        </div>
       </motion.div>
 
       {/* Scroll indicator */}

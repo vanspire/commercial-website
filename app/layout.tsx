@@ -117,7 +117,7 @@ const jsonLd = {
       logo: `${SITE_URL}/blacklogo.svg`,
       sameAs: [
         "https://www.linkedin.com/company/vanspire-innovations/",
-        "https://www.instagram.com/vanspire.in/",
+        "https://www.instagram.com/vanspire.innovations/",
         "https://twitter.com/vanspirein",
         "https://www.youtube.com/@vanspire",
         "https://www.facebook.com/vanspire"
