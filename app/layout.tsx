@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -181,7 +182,9 @@ export default function RootLayout({
         </LayoutWrapper>
         <Footer />
         <ChatBot />
-        <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         <VercelAnalytics />
         <SpeedInsights />
       </body>
