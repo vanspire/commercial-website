@@ -47,7 +47,7 @@ const team = [
     role: 'Systems & Infra',
     linkedin: 'https://www.linkedin.com/in/sreehari-s-5a2a592b9/',
     bio: 'Focusing on building scalable systems and core technological foundations for Vanspire ventures.',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+    image: '/sreehari.webp',
   },
   {
     name: 'Adithyan Dileep',
