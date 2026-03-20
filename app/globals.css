@@ -12,7 +12,7 @@
   }
 
   body {
-    @apply bg-white text-brand-black font-sans min-h-screen flex flex-col;
+    @apply bg-eid-navy text-eid-cream font-sans min-h-screen flex flex-col;
   }
 
   h1,
@@ -91,5 +91,25 @@
   /* Divider line */
   .divider {
     @apply w-full h-px bg-brand-border;
+  }
+
+  /* Eid Theme Animations */
+  .eid-cta-glow {
+    position: relative;
+    /* Apply a very slow, soft golden pulse effect */
+    animation: eid-glow 4s ease-in-out infinite alternate;
+  }
+  
+  html.no-animations .eid-cta-glow {
+    animation: none;
+  }
+
+  @keyframes eid-glow {
+    0% {
+      box-shadow: 0 0 5px rgba(212, 175, 55, 0.2), 0 0 10px rgba(212, 175, 55, 0.1);
+    }
+    100% {
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 0 25px rgba(212, 175, 55, 0.3);
+    }
   }
 }

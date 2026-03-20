@@ -23,6 +23,12 @@ const config: Config = {
           'border-dark': '#2a2a2a',
           accent: '#0a0a0a',
         },
+        eid: {
+          navy: '#0B132B',
+          gold: '#D4AF37',
+          cream: '#F8F5F2',
+          'gold-light': '#FBBF24',
+        },
       },
       spacing: {
         '18': '4.5rem',

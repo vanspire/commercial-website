@@ -9,6 +9,7 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ChatBot from "@/components/chat/ChatBot";
 import GoogleAnalytics from "@/components/Analytics";
+import EidThemeWrapper from "@/components/theme/EidThemeWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -175,7 +176,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans bg-white text-brand-black">
+      <body className="font-sans bg-eid-navy text-eid-cream">
+        <EidThemeWrapper />
         <Header />
         <LayoutWrapper>
           <main className="flex-1">{children}</main>

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import EidBanner from './EidBanner'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -17,6 +18,7 @@ const navItems = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [bannerVisible, setBannerVisible] = useState(true)
   const pathname = usePathname()
 
   const darkHeroRoutes = ['/']
@@ -25,6 +27,12 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    // Check banner dismissed state
+    if (localStorage.getItem('eid-banner-dismissed')) {
+      setBannerVisible(false)
+    }
+    
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -38,21 +46,20 @@ export default function Header() {
   }, [menuOpen])
 
   const isSolid = !isDarkHeroRoute || scrolled
-  const navTextColor = isSolid ? 'text-brand-black hover:text-brand-muted' : 'text-white/80 hover:text-white'
-  const logoSrc = isSolid ? '/blacklogo.svg' : '/whitelogo.svg'
-  const ctaClasses = isSolid 
-    ? 'bg-brand-black text-white border-brand-black hover:bg-white hover:text-brand-black'
-    : 'bg-white text-brand-black border-white hover:bg-transparent hover:text-white hover:border-white'
-  const mobileMenuIconColor = isSolid ? 'text-brand-black' : 'text-white'
+  const navTextColor = isSolid ? 'text-eid-cream hover:text-brand-muted' : 'text-eid-cream/80 hover:text-white'
+  const logoSrc = '/whitelogo.svg' // Always use white logo for dark navy theme
+  const ctaClasses = 'bg-eid-gold text-eid-navy border-eid-gold hover:bg-eid-gold-light eid-cta-glow font-medium'
+  const mobileMenuIconColor = isSolid ? 'text-eid-cream' : 'text-white'
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex flex-col ${
         isSolid
-          ? 'bg-white border-b border-brand-border shadow-sm'
+          ? 'bg-eid-navy/95 backdrop-blur-sm border-b border-brand-border/10 shadow-sm'
           : 'bg-transparent'
       }`}
     >
+      {bannerVisible && <EidBanner onDismiss={() => setBannerVisible(false)} />}
       <div className="container-site flex items-center justify-between h-[75px] md:h-[85px]">
         {/* Logo */}
         <Link href="/" aria-label="Vanspire home" className="flex items-center">
@@ -142,11 +149,11 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="px-6 py-6 border-t border-brand-border">
+          <div className="px-6 py-6 border-t border-brand-border/20">
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="block w-full text-center h-[50px] leading-[50px] bg-brand-black text-white text-[14px] font-medium hover:bg-brand-muted transition-colors duration-300"
+              className="block w-full text-center h-[50px] leading-[50px] bg-eid-gold text-eid-navy text-[14px] eid-cta-glow font-medium transition-colors duration-300"
             >
               Get in Touch
             </Link>
